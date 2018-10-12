@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: HTSeq
+Version: 0.7.2
+Summary: A framework to process and analyze data from high-throughput sequencing (HTS) assays
+Home-page: http://www-huber.embl.de/users/anders/HTSeq/
+Author: Fabio Zanini
+Author-email: fabio.zanini@stanford.edu
+License: GPL3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python

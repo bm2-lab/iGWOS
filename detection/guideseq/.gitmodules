@@ -1,0 +1,4 @@
+[submodule "guideseq/umi"]
+	path = guideseq/umi
+	url = https://github.com/aryeelab/umi.git
+    branch = master
