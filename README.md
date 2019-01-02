@@ -156,20 +156,18 @@
     Prediction of CRISPR-Cas9 off-target sites with iGWOS.
     
     positional arguments:
-      gRNA              input your gRNA file. The input file is tab-delimited,
-                        formed like data/gRNA.tab
+      gRNA              input your gRNA file, formed like data/gRNA.tab
       cell              the cell-type of performed gRNAs
       cid               the cell-id encode file, formed like data/encode_hg19.tab
     
     optional arguments:
       -h, --help        show this help message and exit
       --version         show program's version number and exit
-      -g GENOME         the genome path for candidate off-target searching,
+      -g GENOME         the genome folder for candidate off-target searching,
                         default=genome/hg19
       -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
                         default=5
       -gpu GPU          select a gpu device to perform cas-offinder and
                         deepcrispr, default=0
-      -e ENCODE         the encode path, default=/home/data/encode
-      -o OUTPUT         the output file path, default=data
-
+      -e ENCODE         the encode folder, default=/home/data/encode
+      -o OUTPUT         the output folder, default=data
