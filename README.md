@@ -2,9 +2,9 @@
 **i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch
 
 
-##OTS Detection
+## OTS Detection
 
-####Requirement:
+#### Requirement:
 
 HTSeq==0.6.1p1  
 PyYAML==3.11    
@@ -17,10 +17,10 @@ nwalign==0.3.1
 statsmodels==0.6.1  
 pysam==0.9.1.4 
 
-####Usage:
+#### Usage:
 	python [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
 	
-#####option0:    
+##### option0:    
     -h --help :
         show the help message
     -UID:
@@ -39,9 +39,9 @@ pysam==0.9.1.4
         treated sequencing data 2, if sequencing data is single-end, read1 is only necessary
         
 		
-#####option1:
+##### option1:
 option1 is different when chosing different experiment method
->when chosing GUIDE-seq:   
+> when chosing GUIDE-seq:   
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
