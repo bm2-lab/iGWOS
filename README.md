@@ -176,16 +176,12 @@
     
     python main.py -g genome/hg19 -m 5 -gpu 0 -e /home/data/encode -o data data/gRNA.tab K562 data/encode_hg19.tab
 
->gRNA file format    
-
-![](/img/gRNA.png)  
+>gRNA file format     
 
     sgID	gRNA	Chr	Strand	Start
     HBB	CTTGCCCCACAGGGCAGTAACGG	chr11	+	5248198
     FANCF	GGAATCCCTTCTGCAGCACCTGG	chr11	-	22647332
 >cell encode file format    
-
-![](/img/encode.png)    
 
     h1	MCF-7
     h2	GM12878
