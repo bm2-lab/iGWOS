@@ -20,7 +20,7 @@
 ## Usage
 	python [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
 	
-    option0:    
+#####option0:    
     -h --help :
         show the help message
     -UID:
@@ -38,10 +38,10 @@
     -r2:
         treated sequencing data 2, if sequencing data is single-end, read1 is only necessary
         
-	option1:
-    option1 is different when chosing different experiment method
+#####option1:
+   option1 is different when chosing different experiment method
     
-    when chosing GUIDE-seq:   
+>when chosing GUIDE-seq:   
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
@@ -71,7 +71,7 @@
         demultiplex_min_reads, 
         necessary with default 1000
 			
-    when chosing CIRCLE-seq:   
+>when chosing CIRCLE-seq:   
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
@@ -107,7 +107,7 @@
         Whether or not the paired read merging step should takingTrue, 
         necessary and with default True
 		
-    when chosing SITE-seq:  
+>when chosing SITE-seq:  
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
