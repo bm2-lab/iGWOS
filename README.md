@@ -118,7 +118,7 @@
 			
 			
 			
->Example:   
+>Example  
 
     python Plt_main.py 
         -UID test_OTS
@@ -171,3 +171,7 @@
                         deepcrispr, default=0
       -e ENCODE         the encode folder, default=/home/data/encode
       -o OUTPUT         the output folder, default=data
+      
+>Example  
+    
+    python main.py -g genome/hg19 -m 5 -gpu 0 -e /home/data/encode -o data data/gRNA.tab K562 data/encode_hg19.tab
