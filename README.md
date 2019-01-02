@@ -178,7 +178,7 @@
 
 >gRNA file format    
 
-![](/img/gRNA.png)
+![](/img/gfile.png)
 
 >cell encode file format    
 
