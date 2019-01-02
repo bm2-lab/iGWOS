@@ -178,4 +178,4 @@
 
 >image  
 
-![gRNA file format](/img/gRNA.png)
+[gRNA file format](/img/gRNA.png)
