@@ -138,4 +138,14 @@ option1 is different when chosing different experiment method
         -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
         -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
-##OTS Prediction
+## OTS Prediction
+
+### Requirement:
+parse   
+pandas  
+numpy   
+pyfaidx     
+tensorflow 
+DeepCRISPR
+
+### Usage:

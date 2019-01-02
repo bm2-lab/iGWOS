@@ -1,14 +1,10 @@
 from parse import args
-import sys
 import os
-import re
 import pandas as pd
 import numpy as np
 from pyfaidx import Fasta
-import pickle
 import tensorflow as tf
 from DeepCRISPR.deepcrispr import DCModelOfftar
-import math
 from CFD.otscore import calcCfdScore
 
 
