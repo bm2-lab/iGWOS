@@ -125,7 +125,7 @@ cas_input(gen_path,gRNAs,mismatch,gpu)
 f_pot = pot(f_gRNA)
 
 # second, encode ots and predict with deepcrispr
-f_cid=pd.read_csv(cid_path,sep='\t',skiprows=1,names=['cid','cell'])
+f_cid=pd.read_csv(cid_path,sep='\t',names=['cid','cell'])
 cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
 
 sg_ots,ot_ots = encode(f_gRNA, en_path, cid)
