@@ -105,7 +105,7 @@ def integ(f,output):
     f.ix[f.Mismatch == 5, 'iGWOS'] = f.ix[f.Mismatch == 5, 'CFD']
 
     # save integrate result
-    f.to_csv('{0}/integ.tab'.format(output), sep="\t", index=False)
+    f.to_csv('{0}/iGWOS.tab'.format(output), sep="\t", index=False)
     print(f.describe())
 
 gRNA_path=args.gRNA

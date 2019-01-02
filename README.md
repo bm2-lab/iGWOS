@@ -2,9 +2,9 @@
 **i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch
 
 
-## OTS Detection
+# OTS Detection
 
-### Requirement:
+## Requirement
 
 * HTSeq==0.6.1    
 * PyYAML==3.11    
@@ -17,10 +17,10 @@
 * statsmodels==0.6.1  
 * pysam==0.9.1.4 
 
-### Usage:
+## Usage
 	python [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
 	
-#### option0:    
+    option0:    
     -h --help :
         show the help message
     -UID:
@@ -38,10 +38,10 @@
     -r2:
         treated sequencing data 2, if sequencing data is single-end, read1 is only necessary
         
-		
-#### option1:
-option1 is different when chosing different experiment method
-> when chosing GUIDE-seq:   
+	option1:
+    option1 is different when chosing different experiment method
+    
+    when chosing GUIDE-seq:   
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
@@ -71,7 +71,7 @@ option1 is different when chosing different experiment method
         demultiplex_min_reads, 
         necessary with default 1000
 			
->when chosing CIRCLE-seq:   
+    when chosing CIRCLE-seq:   
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
@@ -107,7 +107,7 @@ option1 is different when chosing different experiment method
         Whether or not the paired read merging step should takingTrue, 
         necessary and with default True
 		
->when chosing SITE-seq:  
+    when chosing SITE-seq:  
 
     -m:
         DO NOT FILL ANY VALUE FOR THIS PARAMETER
@@ -138,9 +138,9 @@ option1 is different when chosing different experiment method
         -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
         -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
-## OTS Prediction
+# OTS Prediction
 
-### Requirement: 
+## Requirement
 * python == 3.6   
 * pandas == 0.20.1  
 * numpy == 1.14.5   
@@ -148,4 +148,28 @@ option1 is different when chosing different experiment method
 * tensorflow == 1.8.0  
 * sonnet == 1.9
 
-### Usage:
+## Usage
+    python main.py [-h] [--version] [-g GENOME] [-m {0,1,2,3,4,5}] [-gpu GPU]
+             [-e ENCODE] [-o OUTPUT]
+             gRNA cell cid
+
+    Prediction of CRISPR-Cas9 off-target sites with iGWOS.
+    
+    positional arguments:
+      gRNA              input your gRNA file. The input file is tab-delimited,
+                        formed like data/gRNA.tab
+      cell              the cell-type of performed gRNAs
+      cid               the cell-id encode file, formed like data/encode_hg19.tab
+    
+    optional arguments:
+      -h, --help        show this help message and exit
+      --version         show program's version number and exit
+      -g GENOME         the genome path for candidate off-target searching,
+                        default=genome/hg19
+      -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
+                        default=5
+      -gpu GPU          select a gpu device to perform cas-offinder and
+                        deepcrispr, default=0
+      -e ENCODE         the encode path, default=/home/data/encode
+      -o OUTPUT         the output file path, default=data
+
