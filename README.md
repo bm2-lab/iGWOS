@@ -176,6 +176,5 @@
     
     python main.py -g genome/hg19 -m 5 -gpu 0 -e /home/data/encode -o data data/gRNA.tab K562 data/encode_hg19.tab
 
->image  
-
-[gRNA file format](/img/gRNA.png)
+>gRNA file format    
+![](/img/gRNA.png)
