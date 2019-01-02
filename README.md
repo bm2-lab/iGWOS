@@ -178,8 +178,25 @@
 
 >gRNA file format    
 
-![](/img/gRNA.png)
+![](/img/gRNA.png)  
 
+    sgID	gRNA	Chr	Strand	Start
+    HBB	CTTGCCCCACAGGGCAGTAACGG	chr11	+	5248198
+    FANCF	GGAATCCCTTCTGCAGCACCTGG	chr11	-	22647332
 >cell encode file format    
 
-![](/img/encode.png)
+![](/img/encode.png)    
+
+    h1	MCF-7
+    h2	GM12878
+    h3	HepG2
+    h4	LNCaP clone FGC
+    h5	HCT116
+    h6	HeLa-S3
+    h7	K562
+    h8	HL-60
+    h9	GM06990
+    h10	Caco-2
+    h11	NB4
+    h12	BE2C
+    h13	HEK293
