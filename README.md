@@ -6,16 +6,16 @@
 
 ## Requirement
 
-* HTSeq==0.6.1    
-* PyYAML==3.11    
-* swalign==0.3.1  
-* pyfaidx==0.2.7  
-* svgwrite==1.1.6     
-* regex==2016.07.21   
-* numpy==1.11.1   
-* nwalign==0.3.1  
-* statsmodels==0.6.1  
-* pysam==0.9.1.4 
+* HTSeq == 0.6.1    
+* PyYAML == 3.11    
+* swalign == 0.3.1  
+* pyfaidx == 0.2.7  
+* svgwrite == 1.1.6     
+* regex == 2016.07.21   
+* numpy == 1.11.1   
+* nwalign == 0.3.1  
+* statsmodels == 0.6.1  
+* pysam == 0.9.1.4 
 
 ## Usage
 	python [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
@@ -115,9 +115,7 @@
         /path/to/reference_genome.fa
     -R:
         target sequence including PAM
-			
-			
-			
+					
 >Example  
 
     python Plt_main.py 
@@ -140,6 +138,8 @@
 
 # OTS Prediction
 genome encode
+
+
 ## Requirement
 * python == 3.6   
 * pandas == 0.20.1  
@@ -190,9 +190,3 @@ genome encode
     h5	HCT116
     h6	HeLa-S3
     h7	K562
-    h8	HL-60
-    h9	GM06990
-    h10	Caco-2
-    h11	NB4
-    h12	BE2C
-    h13	HEK293
