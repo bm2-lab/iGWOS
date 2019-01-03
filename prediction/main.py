@@ -117,6 +117,16 @@ en_path=args.encode
 cid_path=args.cid
 out_path=args.output
 
+if gen_path[-1] == '/':
+    gen_path = gen_path[:-1]
+if en_path[-1] == '/':
+    en_path = en_path[:-1]
+if out_path[-1] == '/':
+    out_path = out_path[:-1]
+
+if not os.path.exists(out_path):
+    os.mkdir(out_path)
+
 f_gRNA=pd.read_csv(gRNA_path,sep='\t',low_memory=False)
 gRNAs=f_gRNA.gRNA.tolist()
 
