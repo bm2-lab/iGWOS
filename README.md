@@ -139,7 +139,7 @@
         -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
 # OTS Prediction
-
+genome encode
 ## Requirement
 * python == 3.6   
 * pandas == 0.20.1  
