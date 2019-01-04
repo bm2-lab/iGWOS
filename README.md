@@ -137,7 +137,8 @@
         -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
 # OTS Prediction
-genome encode
+Predict CRISPR/Cas9 off-target sites by integrating CFD and DeepCRISPR.
+The genome encode can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
 
 ## Requirement
