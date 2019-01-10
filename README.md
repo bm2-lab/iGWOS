@@ -6,7 +6,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
 * Current data processing supports three OTS detection techniques (GUIDE-seq, CIRCLE-seq, and SITE-seq).  
 * Current integrate method iGWOS, by aggregating CFD and DeepCRISPR, supports conventional NGG-PAM OTS prediction with mismatches up to 6.
 
-# the NGS data processing on OTS Detection
+# NGS Data Processing on OTS Detection Techniques
 
 ## Requirement
 
@@ -140,7 +140,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
         -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
         -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
-# OTS Prediction
+# Integrate Method for OTS Prediction
 Predict CRISPR/Cas9 off-target sites by integrating CFD and DeepCRISPR.
 The genome encode can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
