@@ -1,8 +1,12 @@
 # iGWOS
 **i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch
 
+## Introduction
+iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal OTS prediction by aggregating the available OTS prediction tools in a complementary way.   
+* Current data processing supports three OTS detection techniques (GUIDE-seq, CIRCLE-seq, and SITE-seq).  
+* Current integrate method iGWOS, by aggregating CFD and DeepCRISPR, supports conventional NGG-PAM OTS prediction with mismatches up to 6.
 
-# OTS Detection
+# the NGS data processing on OTS Detection
 
 ## Requirement
 
