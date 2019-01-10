@@ -142,7 +142,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
 
 # Integrate Method for OTS Prediction
 Predict CRISPR/Cas9 off-target sites by integrating CFD and DeepCRISPR.
-The genome encode can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
+The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
 
 ## Requirement
