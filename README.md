@@ -120,7 +120,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
     -R:
         target sequence including PAM
 					
->Example  
+## Example  
 
     python Plt_main.py 
         -UID test_OTS

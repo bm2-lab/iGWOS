@@ -78,7 +78,7 @@ def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
     # f.close()
     sess = tf.InteractiveSession()
     ## using regression model, otherwise classification model
-    off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnn'
+    off_target_model_dir = 'DeepCRISPR/trained_models/site2_site3_168'
     is_reg = False
     dcmodel = DCModelOfftar(sess, off_target_model_dir, is_reg)
     offnum = len(x_ot_off_target)
