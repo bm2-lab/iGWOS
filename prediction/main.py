@@ -95,14 +95,13 @@ def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
     return f1
 
 def integ(f,output):
-    f = f[f.Mismatch > 0]
+    #f = f[f.Mismatch > 0]
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
 
     # integrate prediction to iGWOS
     tool1 = 'CFD'
     tool2 = 'DeepCRISPR'
-    f['iGWOS'] = f[tool1] * 3.4 + f[tool2] * 35
-    f.ix[f.Mismatch == 5, 'iGWOS'] = f.ix[f.Mismatch == 5, 'CFD']
+    f['iGWOS'] = f[tool1] * 0.02 + f[tool2] * 0.56
 
     # save integrate result
     f.to_csv('{0}/iGWOS.tab'.format(output), sep="\t", index=False)
