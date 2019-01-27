@@ -28,7 +28,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
     -h --help :
         show the help message
     -UID:
-        user id, necessary is -U is True, for the determination of data source
+        user id, necessary if -U is True, for the determination of data source
     -D:
         description of sgRNA
     -U:
@@ -138,7 +138,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
         -cbar1 CTCTCTAC
         -cbar2 CTCTCTAT
         -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
-        -ind2guideseq/test/data/undemultiplexed/undemux.i2.fastq
+        -ind2 guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
 # Integrate Method for OTS Prediction
 Predict CRISPR/Cas9 off-target sites by integrating CFD and DeepCRISPR.
