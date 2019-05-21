@@ -141,7 +141,7 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
         -ind2 guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
 # Integrate Method for OTS Prediction
-Predict CRISPR/Cas9 off-target sites by integrating CFD and DeepCRISPR.
+Predict CRISPR/Cas9 off-target sites by integrating CRISPRoff, uCRISPR, MIT, CFD, DeepCRISPR and CROP-IT.
 The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
 
@@ -152,6 +152,11 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 * pyfaidx == 0.4.8.4    
 * tensorflow == 1.8.0  
 * sonnet == 1.9
+* CRISPRoff == 1.1.1
+* ViennaRNA = 2.4.12
+* RIsearch == 2.1
+* uCRISPR == 0.1
+* RNAstructure == 6.1
 
 ## Usage
     python main.py [-h] [--version] [-g GENOME] [-m {0,1,2,3,4,5}] [-gpu GPU]
