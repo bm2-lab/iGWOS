@@ -1,0 +1,458 @@
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/BLESS/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/BLESS.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/BLESS/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 2 guides read/generated from "../bench_fa/BLESS.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/BLESS/".
+#RUNNING: reading given risearch output file "outgz/BLESS/risearch_sg1.out.gz" for gRNA/on-target:GCCTCCCCAAAGCCTGGCCAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/BLESS/".
+#RUNNING: reading given risearch output file "outgz/BLESS/risearch_sg2.out.gz" for gRNA/on-target:GGCCAGGCTTTGGGGAGGCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+sg1     GCCTCCCCAAAGCCTGGCCAGGG CCAGGCCTCCCCAAAGCCTGGCCAGGGAGT  chr2|73161169|73161192|-        6.25785728334    NA      1,0,12,92,952,6485,0    NGG:1,0,5,30,314,2345,0;NAG:0,0,5,38,366,2339,0;NGA:0,0,2,24,272,1801,0
+sg2     GGCCAGGCTTTGGGGAGGCCTGG CCCTGGCCAGGCTTTGGGGAGGCCTGGAGT  chr2|73161173|73161196|+        4.48194186857    NA      1,0,12,176,2121,31654,0 NGG:1,0,4,74,532,4166,0;NAG:0,0,7,75,1263,25164,0;NGA:0,0,1,27,326,2324,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/CIRCLE-seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/CIRCLE-seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/CIRCLE-seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 10 guides read/generated from "../bench_fa/CIRCLE-seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_VEGFA1.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_VEGFA3.out.gz" for gRNA/on-target:GGTGAGTGAGTGTGTGCGTGTGG.
+WARNING: RIsearch output line is missing columns, or info in columns.
+LINE: VEGFA3    1       20      chr17   81195189        81195208        -       -14.31  PPPPUPPPUPPPPPUPUPPP     ccacacacccacacccacac    ca      acacccacacccacacccac
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_Site1.out.gz" for gRNA/on-target:GGGAAAGACCCAGCATCCGTGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_Site4.out.gz" for gRNA/on-target:GGCACTGCGGCTGGAGGTGGGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_Site2.out.gz" for gRNA/on-target:GAACACAAAGCATAGACTGCGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_Site3.out.gz" for gRNA/on-target:GGCCCAGACTGAGCACGTGATGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_FANCF.out.gz" for gRNA/on-target:GGAATCCCTTCTGCAGCACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_HBB.out.gz" for gRNA/on-target:CTTGCCCCACAGGGCAGTAACGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/CIRCLE-seq/".
+#RUNNING: reading given risearch output file "outgz/CIRCLE-seq/risearch_RNF2.out.gz" for gRNA/on-target:GTCATCTTAGTCATTACCTGAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+VEGFA1  GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+VEGFA3  GGTGAGTGAGTGTGTGCGTGTGG TGTGGGTGAGTGAGTGTGTGCGTGTGGGGT  chr6|43737453|43737476|+        4.90976705022    NA      1,2,72,1153,24708,46981,0       NGG:1,1,17,377,6078,13567,0;NAG:0,0,17,214,5389,11070,0;NGA:0,1,38,562,13241,22344,0
+Site1   GGGAAAGACCCAGCATCCGTGGG AAGTGGGAAAGACCCAGCATCCGTGGGTCG  chr9|110103687|110103710|+      4.52868188816    NA      1,0,2,25,268,2662,0     NGG:1,0,1,11,84,867,0;NAG:0,0,1,5,107,1029,0;NGA:0,0,0,9,77,766,0
+Site4   GGCACTGCGGCTGGAGGTGGGGG CGGTGGCACTGCGGCTGGAGGTGGGGGTTA  chr20|31349755|31349778|+       5.31891629991    NA      1,0,15,185,1658,11124,0 NGG:1,0,9,86,743,5231,0;NAG:0,0,3,59,505,3131,0;NGA:0,0,3,40,410,2762,0
+Site2   GAACACAAAGCATAGACTGCGGG ACTGGAACACAAAGCATAGACTGCGGGGCG  chr5|87240596|87240619|+        8.60122520969    NA      1,0,2,49,787,8321,0     NGG:1,0,1,12,145,1529,0;NAG:0,0,1,24,448,4900,0;NGA:0,0,0,13,194,1892,0
+Site3   GGCCCAGACTGAGCACGTGATGG TTGGGGCCCAGACTGAGCACGTGATGGCAG  chr9|110184619|110184642|+      8.78694031683    NA      1,0,3,31,318,3252,0     NGG:1,0,0,9,96,1092,0;NAG:0,0,1,14,116,1175,0;NGA:0,0,2,8,106,985,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+FANCF   GGAATCCCTTCTGCAGCACCTGG TCATGGAATCCCTTCTGCAGCACCTGGATC  chr11|22647331|22647354|-       5.06356667207    NA      1,0,4,53,550,4023,0     NGG:1,0,1,18,273,1502,0;NAG:0,0,0,21,149,1495,0;NGA:0,0,3,14,128,1026,0
+HBB     CTTGCCCCACAGGGCAGTAACGG TCACCTTGCCCCACAGGGCAGTAACGGCAG  chr11|5248197|5248220|+ 3.39180832055   NA       1,0,3,50,530,4276,0     NGG:1,0,0,15,149,1208,0;NAG:0,0,1,20,176,1472,0;NGA:0,0,2,15,205,1596,0
+RNF2    GTCATCTTAGTCATTACCTGAGG GGCAGTCATCTTAGTCATTACCTGAGGTGT  chr1|185056766|185056789|-      6.05062664265    NA      1,0,2,40,396,3696,0     NGG:1,0,0,6,122,992,0;NAG:0,0,1,17,152,1436,0;NGA:0,0,1,17,122,1268,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/Digenome-seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/Digenome-seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/Digenome-seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 10 guides read/generated from "../bench_fa/Digenome-seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_HEK1.out.gz" for gRNA/on-target:GGGAAAGACCCAGCATCCGTGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_HEK2.out.gz" for gRNA/on-target:GAACACAAAGCATAGACTGCGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_HEK3.out.gz" for gRNA/on-target:GGCCCAGACTGAGCACGTGATGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_HEK4.out.gz" for gRNA/on-target:GGCACTGCGGCTGGAGGTGGGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_VEGFA3.out.gz" for gRNA/on-target:GGTGAGTGAGTGTGTGCGTGTGG.
+WARNING: RIsearch output line is missing columns, or info in columns.
+LINE: VEGFA3    1       20      chr17   81195189        81195208        -       -14.31  PPPPUPPPUPPPPPUPUPPP     ccacacacccacacccacac    ca      acacccacacccacacccac
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_FANCF.out.gz" for gRNA/on-target:GGAATCCCTTCTGCAGCACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_VEGFA1.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_HBB.out.gz" for gRNA/on-target:CTTGCCCCACAGGGCAGTAACGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/Digenome-seq/".
+#RUNNING: reading given risearch output file "outgz/Digenome-seq/risearch_RNF2.out.gz" for gRNA/on-target:GTCATCTTAGTCATTACCTGAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+HEK1    GGGAAAGACCCAGCATCCGTGGG AAGTGGGAAAGACCCAGCATCCGTGGGTCG  chr9|110103687|110103710|+      4.52868188816    NA      1,0,2,25,268,2662,0     NGG:1,0,1,11,84,867,0;NAG:0,0,1,5,107,1029,0;NGA:0,0,0,9,77,766,0
+HEK2    GAACACAAAGCATAGACTGCGGG ACTGGAACACAAAGCATAGACTGCGGGGCG  chr5|87240596|87240619|+        8.60122520969    NA      1,0,2,49,787,8321,0     NGG:1,0,1,12,145,1529,0;NAG:0,0,1,24,448,4900,0;NGA:0,0,0,13,194,1892,0
+HEK3    GGCCCAGACTGAGCACGTGATGG TTGGGGCCCAGACTGAGCACGTGATGGCAG  chr9|110184619|110184642|+      8.78694031683    NA      1,0,3,31,318,3252,0     NGG:1,0,0,9,96,1092,0;NAG:0,0,1,14,116,1175,0;NGA:0,0,2,8,106,985,0
+HEK4    GGCACTGCGGCTGGAGGTGGGGG CGGTGGCACTGCGGCTGGAGGTGGGGGTTA  chr20|31349755|31349778|+       5.31891629991    NA      1,0,15,185,1658,11124,0 NGG:1,0,9,86,743,5231,0;NAG:0,0,3,59,505,3131,0;NGA:0,0,3,40,410,2762,0
+VEGFA3  GGTGAGTGAGTGTGTGCGTGTGG TGTGGGTGAGTGAGTGTGTGCGTGTGGGGT  chr6|43737453|43737476|+        4.90976705022    NA      1,2,72,1153,24708,46981,0       NGG:1,1,17,377,6078,13567,0;NAG:0,0,17,214,5389,11070,0;NGA:0,1,38,562,13241,22344,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+FANCF   GGAATCCCTTCTGCAGCACCTGG TCATGGAATCCCTTCTGCAGCACCTGGATC  chr11|22647331|22647354|-       5.06356667207    NA      1,0,4,53,550,4023,0     NGG:1,0,1,18,273,1502,0;NAG:0,0,0,21,149,1495,0;NGA:0,0,3,14,128,1026,0
+VEGFA1  GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+HBB     CTTGCCCCACAGGGCAGTAACGG TCACCTTGCCCCACAGGGCAGTAACGGCAG  chr11|5248197|5248220|+ 3.39180832055   NA       1,0,3,50,530,4276,0     NGG:1,0,0,15,149,1208,0;NAG:0,0,1,20,176,1472,0;NGA:0,0,2,15,205,1596,0
+RNF2    GTCATCTTAGTCATTACCTGAGG GGCAGTCATCTTAGTCATTACCTGAGGTGT  chr1|185056766|185056789|-      6.05062664265    NA      1,0,2,40,396,3696,0     NGG:1,0,0,6,122,992,0;NAG:0,0,1,17,152,1436,0;NGA:0,0,1,17,122,1268,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/DIG-seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/DIG-seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/DIG-seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 8 guides read/generated from "../bench_fa/DIG-seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_HEK2.out.gz" for gRNA/on-target:GAACACAAAGCATAGACTGCGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_HEK3.out.gz" for gRNA/on-target:GGCCCAGACTGAGCACGTGATGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_VEGFA1.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_HBB.out.gz" for gRNA/on-target:CTTGCCCCACAGGGCAGTAACGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_FANCF.out.gz" for gRNA/on-target:GGAATCCCTTCTGCAGCACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_CCR5.out.gz" for gRNA/on-target:TCATCCTCCTGACAATCGATAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DIG-seq/".
+#RUNNING: reading given risearch output file "outgz/DIG-seq/risearch_RNF2.out.gz" for gRNA/on-target:GTCATCTTAGTCATTACCTGAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+HEK2    GAACACAAAGCATAGACTGCGGG ACTGGAACACAAAGCATAGACTGCGGGGCG  chr5|87240596|87240619|+        8.60122520969    NA      1,0,2,49,787,8321,0     NGG:1,0,1,12,145,1529,0;NAG:0,0,1,24,448,4900,0;NGA:0,0,0,13,194,1892,0
+HEK3    GGCCCAGACTGAGCACGTGATGG TTGGGGCCCAGACTGAGCACGTGATGGCAG  chr9|110184619|110184642|+      8.78694031683    NA      1,0,3,31,318,3252,0     NGG:1,0,0,9,96,1092,0;NAG:0,0,1,14,116,1175,0;NGA:0,0,2,8,106,985,0
+VEGFA1  GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+HBB     CTTGCCCCACAGGGCAGTAACGG TCACCTTGCCCCACAGGGCAGTAACGGCAG  chr11|5248197|5248220|+ 3.39180832055   NA       1,0,3,50,530,4276,0     NGG:1,0,0,15,149,1208,0;NAG:0,0,1,20,176,1472,0;NGA:0,0,2,15,205,1596,0
+FANCF   GGAATCCCTTCTGCAGCACCTGG TCATGGAATCCCTTCTGCAGCACCTGGATC  chr11|22647331|22647354|-       5.06356667207    NA      1,0,4,53,550,4023,0     NGG:1,0,1,18,273,1502,0;NAG:0,0,0,21,149,1495,0;NGA:0,0,3,14,128,1026,0
+CCR5    TCATCCTCCTGACAATCGATAGG TTCATCATCCTCCTGACAATCGATAGGTAC  chr3|46414748|46414771|+        2.65082877921    NA      2,0,1,16,243,2524,0     NGG:1,0,0,2,69,683,0;NAG:0,0,1,6,100,1006,0;NGA:1,0,0,8,74,835,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+RNF2    GTCATCTTAGTCATTACCTGAGG GGCAGTCATCTTAGTCATTACCTGAGGTGT  chr1|185056766|185056789|-      6.05062664265    NA      1,0,2,40,396,3696,0     NGG:1,0,0,6,122,992,0;NAG:0,0,1,17,152,1436,0;NGA:0,0,1,17,122,1268,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/DISCOVER-Seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/DISCOVER-Seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/DISCOVER-Seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 2 guides read/generated from "../bench_fa/DISCOVER-Seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/DISCOVER-Seq/".
+#RUNNING: reading given risearch output file "outgz/DISCOVER-Seq/risearch_VEGFA.out.gz" for gRNA/on-target:GACCCCCTCCACCCCGCCTCCGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/DISCOVER-Seq/".
+#RUNNING: reading given risearch output file "outgz/DISCOVER-Seq/risearch_HBB.out.gz" for gRNA/on-target:CTTGCCCCACAGGGCAGTAACGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+VEGFA   GACCCCCTCCACCCCGCCTCCGG CCCCGACCCCCTCCACCCCGCCTCCGGGCG  chr6|43738555|43738578|-        2.74315890467    NA      1,0,7,95,1229,10704,0   NGG:1,0,2,35,446,3972,0;NAG:0,0,4,37,458,4339,0;NGA:0,0,1,23,325,2393,0
+HBB     CTTGCCCCACAGGGCAGTAACGG TCACCTTGCCCCACAGGGCAGTAACGGCAG  chr11|5248197|5248220|+ 3.39180832055   NA       1,0,3,50,530,4276,0     NGG:1,0,0,15,149,1208,0;NAG:0,0,1,20,176,1472,0;NGA:0,0,2,15,205,1596,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/GUIDE-seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/GUIDE-seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/GUIDE-seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 8 guides read/generated from "../bench_fa/GUIDE-seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_HEK1.out.gz" for gRNA/on-target:GGGAAAGACCCAGCATCCGTGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_HEK2.out.gz" for gRNA/on-target:GAACACAAAGCATAGACTGCGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_HEK3.out.gz" for gRNA/on-target:GGCCCAGACTGAGCACGTGATGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_VEGFA1.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_VEGFA3.out.gz" for gRNA/on-target:GGTGAGTGAGTGTGTGCGTGTGG.
+WARNING: RIsearch output line is missing columns, or info in columns.
+LINE: VEGFA3    1       20      chr17   81195189        81195208        -       -14.31  PPPPUPPPUPPPPPUPUPPP     ccacacacccacacccacac    ca      acacccacacccacacccac
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_FANCF.out.gz" for gRNA/on-target:GGAATCCCTTCTGCAGCACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/GUIDE-seq/".
+#RUNNING: reading given risearch output file "outgz/GUIDE-seq/risearch_HEK4.out.gz" for gRNA/on-target:GGCACTGCGGCTGGAGGTGGGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+HEK1    GGGAAAGACCCAGCATCCGTGGG AAGTGGGAAAGACCCAGCATCCGTGGGTCG  chr9|110103687|110103710|+      4.52868188816    NA      1,0,2,25,268,2662,0     NGG:1,0,1,11,84,867,0;NAG:0,0,1,5,107,1029,0;NGA:0,0,0,9,77,766,0
+HEK2    GAACACAAAGCATAGACTGCGGG ACTGGAACACAAAGCATAGACTGCGGGGCG  chr5|87240596|87240619|+        8.60122520969    NA      1,0,2,49,787,8321,0     NGG:1,0,1,12,145,1529,0;NAG:0,0,1,24,448,4900,0;NGA:0,0,0,13,194,1892,0
+HEK3    GGCCCAGACTGAGCACGTGATGG TTGGGGCCCAGACTGAGCACGTGATGGCAG  chr9|110184619|110184642|+      8.78694031683    NA      1,0,3,31,318,3252,0     NGG:1,0,0,9,96,1092,0;NAG:0,0,1,14,116,1175,0;NGA:0,0,2,8,106,985,0
+VEGFA1  GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+VEGFA3  GGTGAGTGAGTGTGTGCGTGTGG TGTGGGTGAGTGAGTGTGTGCGTGTGGGGT  chr6|43737453|43737476|+        4.90976705022    NA      1,2,72,1153,24708,46981,0       NGG:1,1,17,377,6078,13567,0;NAG:0,0,17,214,5389,11070,0;NGA:0,1,38,562,13241,22344,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+FANCF   GGAATCCCTTCTGCAGCACCTGG TCATGGAATCCCTTCTGCAGCACCTGGATC  chr11|22647331|22647354|-       5.06356667207    NA      1,0,4,53,550,4023,0     NGG:1,0,1,18,273,1502,0;NAG:0,0,0,21,149,1495,0;NGA:0,0,3,14,128,1026,0
+HEK4    GGCACTGCGGCTGGAGGTGGGGG CGGTGGCACTGCGGCTGGAGGTGGGGGTTA  chr20|31349755|31349778|+       5.31891629991    NA      1,0,15,185,1658,11124,0 NGG:1,0,9,86,743,5231,0;NAG:0,0,3,59,505,3131,0;NGA:0,0,3,40,410,2762,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/HTGTS/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/HTGTS.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/HTGTS/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 4 guides read/generated from "../bench_fa/HTGTS.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/HTGTS/".
+#RUNNING: reading given risearch output file "outgz/HTGTS/risearch_RAG1A.out.gz" for gRNA/on-target:GCCTCTTTCCCACCCACCTTGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/HTGTS/".
+#RUNNING: reading given risearch output file "outgz/HTGTS/risearch_RAG1B.out.gz" for gRNA/on-target:GACTTGTTTTCATTGTTCTCAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/HTGTS/".
+#RUNNING: reading given risearch output file "outgz/HTGTS/risearch_VEGFA.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/HTGTS/".
+#RUNNING: reading given risearch output file "outgz/HTGTS/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+RAG1A   GCCTCTTTCCCACCCACCTTGGG GGCAGCCTCTTTCCCACCCACCTTGGGACT  chr11|36594860|36594883|+       3.4583823235     NA      1,0,2,72,796,6091,0     NGG:1,0,0,16,250,2048,0;NAG:0,0,1,27,323,2386,0;NGA:0,0,1,29,223,1657,0
+RAG1B   GACTTGTTTTCATTGTTCTCAGG ATATGACTTGTTTTCATTGTTCTCAGGTAC  chr11|36594818|36594841|+       3.90486687283    NA      1,0,12,119,1257,11506,0 NGG:1,0,3,46,391,2920,0;NAG:0,0,7,38,444,4030,0;NGA:0,0,2,35,422,4556,0
+VEGFA   GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/IDLV/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/IDLV.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/IDLV/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 4 guides read/generated from "../bench_fa/IDLV.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/IDLV/".
+#RUNNING: reading given risearch output file "outgz/IDLV/risearch_WAS5.out.gz" for gRNA/on-target:CCCATCCATCCAGAGACACAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/IDLV/".
+#RUNNING: reading given risearch output file "outgz/IDLV/risearch_TAT1.out.gz" for gRNA/on-target:TCCTCCTGAGACTCCATACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/IDLV/".
+#RUNNING: reading given risearch output file "outgz/IDLV/risearch_WAS4.out.gz" for gRNA/on-target:TGGATGGAGGAATGAGGAGTTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/IDLV/".
+#RUNNING: reading given risearch output file "outgz/IDLV/risearch_VEGFA3.out.gz" for gRNA/on-target:GGTGAGTGAGTGTGTGCGTGTGG.
+WARNING: RIsearch output line is missing columns, or info in columns.
+LINE: VEGFA3    1       20      chr17   81195189        81195208        -       -14.31  PPPPUPPPUPPPPPUPUPPP     ccacacacccacacccacac    ca      acacccacacccacacccac
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+WAS5    CCCATCCATCCAGAGACACAGGG CTTACCCATCCATCCAGAGACACAGGGAAG  chrX|48544539|48544562|-        7.64382275403    NA      1,0,0,77,833,7109,0     NGG:1,0,0,19,208,1771,0;NAG:0,0,0,30,406,3441,0;NGA:0,0,0,28,219,1897,0
+TAT1    TCCTCCTGAGACTCCATACCTGG AAGCTCCTCCTGAGACTCCATACCTGGTGA  chr16|71609795|71609818|-       6.21231380352    NA      1,0,3,48,443,4281,0     NGG:1,0,2,22,157,1461,0;NAG:0,0,0,17,157,1635,0;NGA:0,0,1,9,129,1185,0
+WAS4    TGGATGGAGGAATGAGGAGTTGG AGAGTGGATGGAGGAATGAGGAGTTGGATG  chrX|48544568|48544591|+        4.02586812581    NA      1,3,16,254,2456,17632,0 NGG:1,1,9,90,901,6536,0;NAG:0,0,6,102,818,5615,0;NGA:0,2,1,62,737,5481,0
+VEGFA3  GGTGAGTGAGTGTGTGCGTGTGG TGTGGGTGAGTGAGTGTGTGCGTGTGGGGT  chr6|43737453|43737476|+        4.90976705022    NA      1,2,72,1153,24708,46981,0       NGG:1,1,17,377,6078,13567,0;NAG:0,0,17,214,5389,11070,0;NGA:0,1,38,562,13241,22344,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/PEM-seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/PEM-seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/PEM-seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 2 guides read/generated from "../bench_fa/PEM-seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/PEM-seq/".
+#RUNNING: reading given risearch output file "outgz/PEM-seq/risearch_RAG1A.out.gz" for gRNA/on-target:GCCTCTTTCCCACCCACCTTGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/PEM-seq/".
+#RUNNING: reading given risearch output file "outgz/PEM-seq/risearch_EMX1.out.gz" for gRNA/on-target:GAGTCCGAGCAGAAGAAGAAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+RAG1A   GCCTCTTTCCCACCCACCTTGGG GGCAGCCTCTTTCCCACCCACCTTGGGACT  chr11|36594860|36594883|+       3.4583823235     NA      1,0,2,72,796,6091,0     NGG:1,0,0,16,250,2048,0;NAG:0,0,1,27,323,2386,0;NGA:0,0,1,29,223,1657,0
+EMX1    GAGTCCGAGCAGAAGAAGAAGGG GCCTGAGTCCGAGCAGAAGAAGAAGGGCTC  chr2|73160981|73161004|+        5.88269589366    NA      1,0,6,80,1210,9868,0    NGG:1,0,1,18,278,2377,0;NAG:0,0,3,21,403,3236,0;NGA:0,0,2,41,529,4255,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
+#START: PIPELINE RUN HAS STARTED.
+#STEP 1: arguments parsed
+#ARG: CRISPRoff_scores_folder = result/SITE-Seq/
+#ARG: comment_out_NAs = False
+#ARG: duplex_energy_params = energy_dics.pkl
+#ARG: evaluate_all = False
+#ARG: guides = ../bench_fa/SITE-Seq.fa
+#ARG: no_azimuth = True
+#ARG: no_off_target_counts = False
+#ARG: risearch_results_folder = outgz/SITE-Seq/
+#ARG: rnafold_x = RNAfold
+#ARG: sorted_CRISPRoff_reports = False
+#ARG: specificity_report = stdout
+#STEP 2: energy parameters parsed from "energy_dics.pkl"
+#STEP 3: 5 guides read/generated from "../bench_fa/SITE-Seq.fa"
+#WARNING: Skipping STEP 4 (NO energy parameters report for the guides). 
+#STEP 4: Skipping. No output chosen for reporting the energy features of the guides.
+#STEP 5.1: off-targets are read from "outgz/SITE-Seq/".
+#RUNNING: reading given risearch output file "outgz/SITE-Seq/risearch_FANCF.out.gz" for gRNA/on-target:GGAATCCCTTCTGCAGCACCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/SITE-Seq/".
+#RUNNING: reading given risearch output file "outgz/SITE-Seq/risearch_XRCC5.out.gz" for gRNA/on-target:GGTGGACAAGCGGCAGATAGCGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/SITE-Seq/".
+#RUNNING: reading given risearch output file "outgz/SITE-Seq/risearch_PAPSS2.out.gz" for gRNA/on-target:GCATACAGTGATTTGATGAAAGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/SITE-Seq/".
+#RUNNING: reading given risearch output file "outgz/SITE-Seq/risearch_VEGFA.out.gz" for gRNA/on-target:GGGTGGGGGGAGTTTGCTCCTGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.1: off-targets are read from "outgz/SITE-Seq/".
+#RUNNING: reading given risearch output file "outgz/SITE-Seq/risearch_CD34.out.gz" for gRNA/on-target:ATAGGAGAAGATGATGTATAGGG.
+#STEP 5.2: Scores computed and reported for given gRNA and off-targets.
+#STEP 5.3: Reporting the specificity scores below.
+
+Guide_ID        Guide_sequence  On_target_30nt  Genomic_position        CRISPRspec_specificity_score    Azimuth_ontarget_score   MM_counts       MM_detailed
+FANCF   GGAATCCCTTCTGCAGCACCTGG TCATGGAATCCCTTCTGCAGCACCTGGATC  chr11|22647331|22647354|-       5.06356667207    NA      1,0,4,53,550,4023,0     NGG:1,0,1,18,273,1502,0;NAG:0,0,0,21,149,1495,0;NGA:0,0,3,14,128,1026,0
+XRCC5   GGTGGACAAGCGGCAGATAGCGG TTCCGGTGGACAAGCGGCAGATAGCGGAAA  chr2|216974068|216974091|-      9.97526173765    NA      1,0,2,26,332,3680,0     NGG:1,0,0,9,94,1068,0;NAG:0,0,2,10,138,1434,0;NGA:0,0,0,7,100,1178,0
+PAPSS2  GCATACAGTGATTTGATGAAAGG AATAGCATACAGTGATTTGATGAAAGGACG  chr10|89506436|89506459|+       4.85119685701    NA      1,0,4,51,708,10392,0    NGG:1,0,2,21,258,5475,0;NAG:0,0,2,14,207,2365,0;NGA:0,0,0,16,243,2552,0
+VEGFA   GGGTGGGGGGAGTTTGCTCCTGG AAGGGGGTGGGGGGAGTTTGCTCCTGGACC  chr6|43737290|43737313|-        1.44751952024    NA      1,1,7,80,679,5419,0     NGG:1,1,4,33,291,2230,0;NAG:0,0,3,38,251,1827,0;NGA:0,0,0,9,137,1362,0
+CD34    ATAGGAGAAGATGATGTATAGGG TAGGATAGGAGAAGATGATGTATAGGGTTT  chr1|208072333|208072356|+      5.43446959215    NA      1,0,3,84,1075,10374,0   NGG:1,0,1,13,276,2388,0;NAG:0,0,1,33,397,3996,0;NGA:0,0,1,38,402,3990,0
+
+#STEP 5: Reporting DONE.
+#END: FINISHED RUNNING THE PIPELINE WITH NO ERROR.
