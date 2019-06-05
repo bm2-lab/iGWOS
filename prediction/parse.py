@@ -3,7 +3,7 @@ import argparse
 parser = argparse.ArgumentParser(prog='iGWOS', description="Prediction of CRISPR-Cas9 off-target sites with iGWOS.")
 parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 # gRNAs file input for off-target prediction
-parser.add_argument('gRNA',help='input your gRNA file, formed like data/gRNA.tab', default='data/gRNA.tab')
+parser.add_argument('gRNA',help='gRNAs file in Fasta format', default='data/gRNA.fa')
 # run deepcrispr with gRNA in certain cell-type
 parser.add_argument('cell', help='the cell-type of performed gRNAs',default='K562')
 # run cas-offinder to get the candidate off-target sites.

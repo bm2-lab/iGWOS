@@ -152,8 +152,11 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 * pyfaidx == 0.4.8.4    
 * tensorflow == 1.8.0  
 * sonnet == 1.9
+* biopython == 1.73
 * CRISPRoff == 1.1.1
-* ViennaRNA = 2.4.12
+* python == 2.7
+* Bio == 0.1.0
+* ViennaRNA == 2.4.12
 * RIsearch == 2.1
 * uCRISPR == 0.1
 * RNAstructure == 6.1
