@@ -6,6 +6,8 @@ from pyfaidx import Fasta
 import tensorflow as tf
 from DeepCRISPR.deepcrispr import DCModelOfftar
 from CFD.otscore import calcCfdScore
+from MIT.otscore import calcMitScore
+from CROPIT.otscore import calcCropitScore
 
 
 # first, get POT list of gRNA based on Cas-OFFinder.
@@ -18,6 +20,7 @@ def cas_input(genome,gRNAs,mismatch,gpu):
     f.close()
 
     os.system("CUDA_VISIBLE_DEVICES="+str(gpu)+" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
+
 
 def pot(gid,gRNAs):
     f_cas=pd.read_csv('data/cas_output.txt',sep='\t',names=['pattern','Chr','Start','OTS','Strand','Mismatch'])
@@ -34,6 +37,7 @@ def pot(gid,gRNAs):
     f_gRNA.drop('OTS', axis=1, inplace=True)
     f_gRNA.to_csv('data/gRNA.tab', sep='\t', index=False)
     return f_gRNA, f_pot
+
 
 # encode the ots
 def epi(gline, ctcf, dnase, h3k4me3, rrbs, span):
@@ -52,6 +56,7 @@ def epi(gline, ctcf, dnase, h3k4me3, rrbs, span):
             seq = f[Chr][Start:Start + span].seq
         ls.append([1 if seq[i] == 'A' else 0 for i in range(span)])
     return ls
+
 
 def encode(f1, en_path, cid, func=epi):
     span = 23
@@ -81,7 +86,7 @@ def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
     # x_sg_off_target, x_ot_off_target = pickle.load(f)
     # f.close()
     sess = tf.InteractiveSession()
-    ## using regression model, otherwise classification model
+    # using regression model, otherwise classification model
     off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnnofftar_pt_cnn'
     is_reg = False
     dcmodel = DCModelOfftar(sess, off_target_model_dir, is_reg)
@@ -97,6 +102,14 @@ def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
     f1['DeepCRISPR'] = pd.Series(predicted_off_target)
     f1.to_csv('data/deepcrispr.tab', sep='\t', index=False)
     return f1
+
+
+def crisproff(gRNA_path):
+    os.system("./CRISPRoff/crisproff.sh "+gRNA_path)
+
+def ucrispr(gRNAs):
+    return
+
 
 def integ(f,output):
     #f = f[f.Mismatch > 0]
@@ -130,11 +143,12 @@ if out_path[-1] == '/':
 if not os.path.exists(out_path):
     os.mkdir(out_path)
 
-#f_gRNA=pd.read_csv(gRNA_path,sep='\t',low_memory=False)
-#gRNAs=f_gRNA.gRNA.tolist()
+# read fa file of gRNAs.
 fa_gRNA = Fasta(gRNA_path, sequence_always_upper=True)
 gid = list(fa_gRNA.keys())
 gRNAs = [fa_gRNA[i][:].seq for i in gid]
+fa_gRNA.close()
+
 # first, get POT list of gRNA based on Cas-OFFinder.
 cas_input(gen_path, gRNAs, mismatch, gpu)
 f_gRNA, f_pot = pot(gid, gRNAs)
