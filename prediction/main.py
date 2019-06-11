@@ -32,7 +32,7 @@ def pot(gid,gRNAs):
     f_pot = pd.merge(f_cas, f_gRNA, how='left', on='pattern')
     f_pot.drop(['pattern'], axis=1, inplace=True)
     f_pot = f_pot.reindex(columns=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch'])
-    f_pot.to_csv('data/POT.tab', sep='\t', index=False)
+    f_pot.to_csv('data/pot.tab', sep='\t', index=False)
     f_gRNA = f_pot[f_pot.gRNA==f_pot.OTS]
     f_gRNA.drop('OTS', axis=1, inplace=True)
     f_gRNA.to_csv('data/gRNA.tab', sep='\t', index=False)
@@ -65,11 +65,11 @@ def encode(f1, en_path, cid, func=epi):
     h3k4me3 = Fasta('{0}/{1}_h3k4me3.fa'.format(en_path, cid))
     rrbs = Fasta('{0}/{1}_rrbs.fa'.format(en_path, cid))
 
-    f2 = pd.read_csv('data/POT.tab', usecols=[0, 2, 3, 4, 5], sep='\t', low_memory=False)
+    f2 = pd.read_csv('data/pot.tab', usecols=[0, 2, 3, 4, 5], sep='\t', low_memory=False)
     input = f2.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
     x_ot_off_target = np.array(input).reshape(f2.shape[0], 8, 1, span)
 
-    f3 = pd.read_csv('data/POT.tab', sep='\t', usecols=[0, 1], low_memory=False)
+    f3 = pd.read_csv('data/pot.tab', sep='\t', usecols=[0, 1], low_memory=False)
     f3 = pd.merge(f3, f1, how='inner', on=['sgID', 'gRNA'])
     input = f3.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
     x_sg_off_target = np.array(input).reshape(f3.shape[0], 8, 1, span)
@@ -104,25 +104,50 @@ def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
     return f1
 
 
-def crisproff(gRNA_path):
-    os.system("./CRISPRoff/crisproff.sh "+gRNA_path)
+def score_join(gRNA_path,f):
+    #f = f[f.Mismatch > 0]
 
-def ucrispr(gRNAs):
-    return
+    #CFD, MIT, CROP-IT score
+    f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
+    f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
+    f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
+
+    #crisproff score
+    os.system("./crisproff.sh "+gRNA_path)
+    fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
+    f = pd.merge(f, fcroff, how="left", on=['gRNA','OTS','Chr','Strand','Start','Mismatch'])
+
+    #uCRISPR score
+    os.system("./ucrispr.sh ")
+    fucr = pd.read_csv('data/ucrispr.out', sep=' ', low_memory=False)
+    f = pd.concat(f, fucr['uCRISPR'], axis=1)
+
+    # save join result
+    f.to_csv('data/join.tab', sep="\t", index=False)
+    print(f.describe())
+    return(f)
 
 
 def integ(f,output):
-    #f = f[f.Mismatch > 0]
-    f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
+
+    # normalize
+    #f['CRISPRseek'] = f['CRISPRseek'] / 100
+    #f['CCTop'] = f['CCTop'] / 224
+    f['CROP-IT'] = f['CROP-IT'] / 650
+    f['MIT'] = f['MIT'] / 100
+    f['uCRISPR'] = f['uCRISPR'] / 6.5
+    f['CRISPRoff'] = (f['CRISPRoff'] + 40) / 75
 
     # integrate prediction to iGWOS
-    tool1 = 'CFD'
-    tool2 = 'DeepCRISPR'
-    f['iGWOS'] = f[tool1] * 0.02 + f[tool2] * 0.56
+    tlst = ["CRISPRoff", "uCRISPR", "MIT", "CFD", "DeepCRISPR", "CROP-IT"]
+    weightper = [102.732, 99.673, 98.702, 92.501, 87.856, 82.08]
+    weight = [weightper[i] / 100 for i in range(0, len(weightper))]
+    f['iGWOS_weight'] = np.sum(f[tlst[i]] * weight[i] for i in range(6))
 
-    # save integrate result
-    f.to_csv('{0}/iGWOS.tab'.format(output), sep="\t", index=False)
-    print(f.describe())
+    weight_rank=range(1,7)[::-1]
+    f['iGWOS_rank'] = np.sum(f[tlst[i]] * weight_rank[i] for i in range(6))
+    f.to_csv('{0}/igwos.tab'.format(output), sep="\t", index=False)
+
 
 gRNA_path=args.gRNA
 cell=args.cell
@@ -160,5 +185,8 @@ cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
 sg_ots,ot_ots = encode(f_gRNA, en_path, cid)
 f_deep = deepots(gpu,f_pot,sg_ots,ot_ots)
 
-# third, integrate f_deep with cfd
-integ(f_deep,out_path)
+# third, join tools' prediction scores
+f_join = score_join(gRNA_path, f_deep)
+
+#fourth, integrate to iGWOS score
+integ(f_join, out_path)
