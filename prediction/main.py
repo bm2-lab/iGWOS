@@ -154,8 +154,8 @@ cell=args.cell
 gen_path=args.genome
 mismatch=args.mismatch
 gpu=args.gpu
-en_path=args.encode
 cid_path=args.cid
+en_path=args.encode
 out_path=args.output
 
 if gen_path[-1] == '/':

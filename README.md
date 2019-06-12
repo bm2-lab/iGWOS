@@ -146,12 +146,12 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 
 
 ## Requirement
-* python == 3.6   
+* python == 3.7   
 * pandas == 0.20.1  
 * numpy == 1.14.5   
 * pyfaidx == 0.4.8.4    
 * tensorflow == 1.8.0  
-* sonnet == 1.9
+* Sonnet == 1.33
 * CRISPRoff == 1.1.1
 * python == 2.7
 * biopython == 1.73
@@ -159,42 +159,43 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 * RIsearch == 2.1
 * uCRISPR == 0.1
 * RNAstructure == 6.1
+* circos == 0.69-6
 
 ## Usage
-    python main.py [-h] [--version] [-g GENOME] [-m {0,1,2,3,4,5}] [-gpu GPU]
-             [-e ENCODE] [-o OUTPUT]
-             gRNA cell cid
+    python3 main.py [-h] [-h] [--version] [-gRNA GRNA] [-cell CELL] [-g GENOME]
+             [-m {0,1,2,3,4,5}] [-gpu GPU] [-cid CID] [-e ENCODE] [-o OUTPUT]
 
     Prediction of CRISPR-Cas9 off-target sites with iGWOS.
     
-    positional arguments:
-      gRNA              input your gRNA file, formed like data/gRNA.tab
-      cell              the cell-type of performed gRNAs
-      cid               the cell-id encode file, formed like data/encode_hg19.tab
-    
     optional arguments:
       -h, --help        show this help message and exit
-      --version         show program's version number and exit
+      -v, --version     show program's version number and exit
+      -gRNA GRNA        gRNAs file in Fasta format
+      -cell CELL        the cell-type of performed gRNAs
       -g GENOME         the genome folder for candidate off-target searching,
                         default=genome/hg19
       -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
                         default=5
       -gpu GPU          select a gpu device to perform cas-offinder and
                         deepcrispr, default=0
-      -e ENCODE         the encode folder, default=/home/data/encode
-      -o OUTPUT         the output folder, default=data
+      -cid CID          the cell-id file, formed like data/encode_hg19.tab
+      -e ENCODE         the encode folder, default=/data/genome/encode
+      -o OUTPUT         the output folder, default=data/
+
       
 >Example  
     
-    python main.py -g genome/hg19 -m 5 -gpu 0 -e /home/data/encode -o data data/gRNA.tab K562 data/encode_hg19.tab
+    python3 main.py -gRNA data/grna.fa -cell K562 -g genome/hg19 -m 5 -gpu 0 -cid data/encode_hg19.tab -e /data/genome/encode -o data  
 
 >gRNA file format     
 
-    sgID	gRNA	Chr	Strand	Start
-    HBB	CTTGCCCCACAGGGCAGTAACGG	chr11	+	5248198
-    FANCF	GGAATCCCTTCTGCAGCACCTGG	chr11	-	22647332
->cell encode file format    
+    >sg1
+    GCCTCCCCAAAGCCTGGCCAGGG
+    >sg2
+    GGCCAGGCTTTGGGGAGGCCTGG
 
+>cell-id file format: [cid]   [cell]
+    
     h1	MCF-7
     h2	GM12878
     h3	HepG2
@@ -202,3 +203,12 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
     h5	HCT116
     h6	HeLa-S3
     h7	K562
+
+>encode folder format (take K562 cell as an example)
+
+    Format: [encode_path]/[cid]_[epi].fa
+    
+    /data/genome/encode/h7_ctcf.fa
+    /data/genome/encode/h7_dnase.fa
+    /data/genome/encode/h7_h3k4me3.fa
+    /data/genome/encode/h7_rrbs.fa

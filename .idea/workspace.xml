@@ -2,130 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/BLESS.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/CIRCLE-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/DIG-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/DISCOVER-Seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/Digenome-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/GUIDE-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/HTGTS.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/IDLV.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/PEM-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/OTS/SITE-Seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/BLESS/risearch_sg1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/BLESS/risearch_sg2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_FANCF.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_HBB.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_RNF2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_Site1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_Site2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_Site3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_Site4.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_VEGFA1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/CIRCLE-seq/risearch_VEGFA3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_CCR5.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_FANCF.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_HBB.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_HEK2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_HEK3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_RNF2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DIG-seq/risearch_VEGFA1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DISCOVER-Seq/risearch_HBB.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/DISCOVER-Seq/risearch_VEGFA.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_FANCF.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_HBB.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_HEK1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_HEK2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_HEK3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_HEK4.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_RNF2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_VEGFA1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/Digenome-seq/risearch_VEGFA3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_FANCF.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_HEK1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_HEK2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_HEK3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_HEK4.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_VEGFA1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/GUIDE-seq/risearch_VEGFA3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/HTGTS/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/HTGTS/risearch_RAG1A.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/HTGTS/risearch_RAG1B.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/HTGTS/risearch_VEGFA.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/IDLV/risearch_TAT1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/IDLV/risearch_VEGFA3.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/IDLV/risearch_WAS4.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/IDLV/risearch_WAS5.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/PEM-seq/risearch_EMX1.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/PEM-seq/risearch_RAG1A.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/SITE-Seq/risearch_CD34.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/SITE-Seq/risearch_FANCF.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/SITE-Seq/risearch_PAPSS2.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/SITE-Seq/risearch_VEGFA.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/outgz/SITE-Seq/risearch_XRCC5.out.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/BLESS/GCCTCCCCAAAGCCTGGCCAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/BLESS/GGCCAGGCTTTGGGGAGGCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/CTTGCCCCACAGGGCAGTAACGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GAACACAAAGCATAGACTGCGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGAATCCCTTCTGCAGCACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGCACTGCGGCTGGAGGTGGGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGCCCAGACTGAGCACGTGATGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGGAAAGACCCAGCATCCGTGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GGTGAGTGAGTGTGTGCGTGTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/CIRCLE-seq/GTCATCTTAGTCATTACCTGAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/CTTGCCCCACAGGGCAGTAACGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GAACACAAAGCATAGACTGCGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GGAATCCCTTCTGCAGCACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GGCCCAGACTGAGCACGTGATGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/GTCATCTTAGTCATTACCTGAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DIG-seq/TCATCCTCCTGACAATCGATAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DISCOVER-Seq/CTTGCCCCACAGGGCAGTAACGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/DISCOVER-Seq/GACCCCCTCCACCCCGCCTCCGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/CTTGCCCCACAGGGCAGTAACGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GAACACAAAGCATAGACTGCGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGAATCCCTTCTGCAGCACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGCACTGCGGCTGGAGGTGGGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGCCCAGACTGAGCACGTGATGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGGAAAGACCCAGCATCCGTGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GGTGAGTGAGTGTGTGCGTGTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/Digenome-seq/GTCATCTTAGTCATTACCTGAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GAACACAAAGCATAGACTGCGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGAATCCCTTCTGCAGCACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGCACTGCGGCTGGAGGTGGGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGCCCAGACTGAGCACGTGATGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGGAAAGACCCAGCATCCGTGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/GUIDE-seq/GGTGAGTGAGTGTGTGCGTGTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/HTGTS/GACTTGTTTTCATTGTTCTCAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/HTGTS/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/HTGTS/GCCTCTTTCCCACCCACCTTGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/HTGTS/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/IDLV/CCCATCCATCCAGAGACACAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/IDLV/GGTGAGTGAGTGTGTGCGTGTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/IDLV/TCCTCCTGAGACTCCATACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/IDLV/TGGATGGAGGAATGAGGAGTTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/PEM-seq/GAGTCCGAGCAGAAGAAGAAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/PEM-seq/GCCTCTTTCCCACCCACCTTGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/SITE-Seq/ATAGGAGAAGATGATGTATAGGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/SITE-Seq/GCATACAGTGATTTGATGAAAGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/SITE-Seq/GGAATCCCTTCTGCAGCACCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/SITE-Seq/GGGTGGGGGGAGTTTGCTCCTGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/result/SITE-Seq/GGTGGACAAGCGGCAGATAGCGG.CRISPRoff.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/CRISPRoff/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prediction/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/parse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,27 +15,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/iGWOS$parse.coverage" NAME="parse Coverage Results" MODIFIED="1559806301894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
+    <SUITE FILE_PATH="coverage/iGWOS$parse.coverage" NAME="parse Coverage Results" MODIFIED="1560322205496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="iGWOS" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prediction/parse.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prediction/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-465">
-              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="354">
+              <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -163,14 +34,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parse.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prediction/parse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="789">
-                <caret line="160" column="2" lean-forward="true" selection-start-line="160" selection-start-column="2" selection-end-line="160" selection-end-column="2" />
+              <first_editor relative-caret-position="205">
+                <caret line="156" column="18" lean-forward="true" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grna.fa" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prediction/data/grna.fa">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -196,6 +85,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>K562</find>
+      <find>output.txt</find>
+      <find>gRNA_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,8 +99,8 @@
         <option value="$USER_HOME$/Desktop/deep.txt" />
         <option value="$PROJECT_DIR$/prediction/main2.py" />
         <option value="$PROJECT_DIR$/prediction/parse.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/prediction/main.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -223,8 +114,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="162" />
-    <option name="y" value="41" />
+    <option name="x" value="158" />
+    <option name="y" value="18" />
     <option name="width" value="1754" />
     <option name="height" value="1047" />
   </component>
@@ -345,7 +236,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="162" y="41" width="1754" height="1047" extended-state="0" />
+    <frame x="158" y="18" width="1754" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
@@ -354,13 +245,13 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.2539326" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26741573" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49846625" visible="true" weight="0.14698938" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.39438203" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907234" visible="true" weight="0.14698938" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.50153375" side_tool="true" visible="true" weight="0.14698938" />
+      <window_info id="Structure" order="1" sideWeight="0.5009276" side_tool="true" visible="true" weight="0.14698938" />
       <window_info id="Favorites" order="2" sideWeight="0.50153375" side_tool="true" weight="0.14698938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -635,6 +526,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prediction/data/grna.fa">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prediction/data/encode_hg19.tab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -644,28 +549,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prediction/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="396">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prediction/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="789">
-            <caret line="160" column="2" lean-forward="true" selection-start-line="160" selection-start-column="2" selection-end-line="160" selection-end-column="2" />
+          <first_editor relative-caret-position="205">
+            <caret line="156" column="18" lean-forward="true" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prediction/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
