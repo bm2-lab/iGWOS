@@ -9,8 +9,8 @@ using namespace std;
 #include <vector>
 #include <map>
 
-string DATA="/home/yjf/off-target/off-target/tool/uCRISPR/data/";   //absolute path
-string RNAstructure="/home/yjf/off-target/off-target/tool/uCRISPR/RNAstructure/exe/EnsembleEnergy"; //absolute path
+string DATA="/usr/local/tool/uCRISPR/data/";   //absolute path
+string RNAstructure="/usr/local/tool/RNAstructure/exe/EnsembleEnergy"; //absolute path
 
 vector<string> string_to_vector_string(string sline, int outlet) {
    istringstream ss (sline);

@@ -32,6 +32,7 @@ def pot(gid,gRNAs):
     f_pot = pd.merge(f_cas, f_gRNA, how='left', on='pattern')
     f_pot.drop(['pattern'], axis=1, inplace=True)
     f_pot = f_pot.reindex(columns=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch'])
+    f_pot.OTS = f_pot.OTS.str.upper()
     f_pot.to_csv('data/pot.tab', sep='\t', index=False)
     f_gRNA = f_pot[f_pot.gRNA==f_pot.OTS]
     f_gRNA.drop('OTS', axis=1, inplace=True)
@@ -115,12 +116,12 @@ def score_join(gRNA_path,f):
     #crisproff score
     os.system("./crisproff.sh "+gRNA_path)
     fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
-    f = pd.merge(f, fcroff, how="left", on=['gRNA','OTS','Chr','Strand','Start','Mismatch'])
+    f = pd.merge(f, fcroff, how="left", on=['gRNA','OTS','Chr','Strand','Start'])
 
     #uCRISPR score
     os.system("./ucrispr.sh ")
     fucr = pd.read_csv('data/ucrispr.out', sep=' ', low_memory=False)
-    f = pd.concat(f, fucr['uCRISPR'], axis=1)
+    f = pd.concat([f, fucr['uCRISPR']], axis=1)
 
     # save join result
     f.to_csv('data/join.tab', sep="\t", index=False)

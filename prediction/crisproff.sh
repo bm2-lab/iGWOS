@@ -8,8 +8,13 @@ gname=${gfile##*/}
 # risearch2.x -c /data/genome/fasta/hg19.fa -o CRISPRoff/hg19.suf
 
 ## off-target prediction
-cp $gfile CRISPRoff/grna/
+if [ ! -d "CRISPRoff/data/" ];then
+	mkdir CRISPRoff/data
+fi
+
+cp $gfile CRISPRoff/data/
 cd CRISPRoff/
+
 if [ ! -d "outgz/" ];then
 	mkdir outgz
 fi
@@ -20,21 +25,24 @@ fi
 
 rm -f outgz/*.out.gz
 rm -f result/*.tsv
-risearch2.x -q grna/$gname -i hg19.suf -s 1:20 -m 5:0 -e 10000 -l 0 --noGUseed -p3
+
+risearch2.x -q data/$gname -i hg19.suf -s 1:20 -m 5:0 -e 10000 -l 0 --noGUseed -p3
 mv *.out.gz outgz/
 
 
 ## CRISPRoff score
-python2 CRISPRspec_CRISPRoff_pipeline.py --guides grna/$gname --risearch_results_folder outgz/ --no_azimuth  --CRISPRoff_scores_folder result/
+python2 CRISPRspec_CRISPRoff_pipeline.py --guides data/$gname --risearch_results_folder outgz/ --no_azimuth  --CRISPRoff_scores_folder result/
 
 
 ## formatted OTS
-echo -e 'gRNA\tOTS\tChr\tStrand\tStart\tCRISPRoff'> pot.tab
+echo -e 'gRNA\tOTS\tChr\tStrand\tStart\tCRISPRoff'> data/crisproff.tab
 for file in result/*.tsv
 do
 	gseq=${file##*/}
 	grna=${gseq:0:23}
 	#echo $grna
-	awk 'BEGIN{FS="\t";OFS="\t"}NR>3{if($1~/chr[0-9XY]*$/ && $4~/GG$/) print "'$grna'",toupper($4),$1,$6,$2+1,$5}' $file >> pot.tab
+	awk 'BEGIN{FS="\t";OFS="\t"}NR>3{if($1~/chr[0-9XY]*$/ && $4~/GG$/) print "'$grna'",toupper($4),$1,$6,$2+1,$5}' $file >> data/crisproff.tab
 done
+
+cp data/crisproff.tab ../data/
 

@@ -12,7 +12,7 @@ parser.add_argument('-m', dest='mismatch', help='the maximum mismatch allowed in
 parser.add_argument('-gpu', help='select a gpu device to perform cas-offinder and deepcrispr, default=0', type=int, default=0)
 # deepcrispr prediction with gRNA encoded.
 parser.add_argument('-cid', help='the cell-id file, formed like data/encode_hg19.tab', default='data/encode_hg19.tab')
-parser.add_argument('-e', dest='encode', help='the encode folder, default=/data/genome/encode',default='/data/genome/encode')
+parser.add_argument('-e', dest='encode', help='the epigenomic encode folder, default=/data/genome/encode',default='/data/genome/encode')
 # output file
 parser.add_argument('-o',dest='output',help='the output folder, default=data/',default='data')
 # encode all the options

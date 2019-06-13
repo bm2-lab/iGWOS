@@ -212,3 +212,13 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
     /data/genome/encode/h7_dnase.fa
     /data/genome/encode/h7_h3k4me3.fa
     /data/genome/encode/h7_rrbs.fa
+    
+    
+## Citation
+
+Jifang Yan, Qi Liu et al. iGWOS.2019(Manuscript submitted)
+
+
+## Contacts
+
+[88jfyan@tongji.edu.cn](88jfyan@tongji.edu.cn) or [qiliu@tongji.edu.cn](qiliu@tongji.edu.cn)
