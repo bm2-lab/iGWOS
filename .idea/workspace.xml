@@ -2,46 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/crisproff.sh" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/crisproff.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/DeepCRISPR/trained_models/site2_site3_168/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/DeepCRISPR/trained_models/site2_site3_168/model.ckpt-168.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/DeepCRISPR/trained_models/site2_site3_168/model.ckpt-168.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/prediction/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prediction/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/parse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/BLESS.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/CIRCLE-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/DIG-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/DISCOVER-Seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/Digenome-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/GUIDE-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/HTGTS.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/IDLV.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/PEM-seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/POT/SITE-Seq.tab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/example/OfftargetSite.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/example/OfftargetSite.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/example/OntargetSite.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/example/OntargetSite.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/BLESS.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/BLESS.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/CIRCLE-seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/CIRCLE-seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/DIG-seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/DIG-seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/DISCOVER-Seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/DISCOVER-Seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/Digenome-seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/Digenome-seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/GUIDE-seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/GUIDE-seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/HTGTS.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/HTGTS.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/IDLV.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/IDLV.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/PEM-seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/PEM-seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/SITE-Seq.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/mydat/SITE-Seq.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/uCRISPR/uCRISPR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/uCRISPR/uCRISPR.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +26,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prediction/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+            <state relative-caret-position="-1232">
+              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -73,8 +38,8 @@
       <file leaf-file-name="parse.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prediction/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+            <state relative-caret-position="396">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -151,9 +116,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
-    <option name="y" value="109" />
-    <option name="width" value="1754" />
+    <option name="x" value="70" />
+    <option name="y" value="34" />
+    <option name="width" value="1940" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -273,8 +238,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="109" width="1754" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="70" y="34" width="1940" height="1047" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -282,13 +246,13 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.2539326" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.39438203" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49907234" visible="true" weight="0.14698938" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29213482" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.13244681" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.5009276" side_tool="true" visible="true" weight="0.14698938" />
+      <window_info id="Structure" order="1" sideWeight="0.50158733" side_tool="true" visible="true" weight="0.13244681" />
       <window_info id="Favorites" order="2" sideWeight="0.50153375" side_tool="true" weight="0.14698938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -596,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prediction/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+        <state relative-caret-position="-1232">
+          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -606,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prediction/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        <state relative-caret-position="396">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>

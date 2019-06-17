@@ -2,6 +2,7 @@ from parse import args
 import os
 import pandas as pd
 import numpy as np
+import pickle
 from pyfaidx import Fasta
 import tensorflow as tf
 from DeepCRISPR.deepcrispr import DCModelOfftar
@@ -11,7 +12,7 @@ from CROPIT.otscore import calcCropitScore
 
 
 # first, get POT list of gRNA based on Cas-OFFinder.
-def cas_input(genome,gRNAs,mismatch,gpu):
+def cas_input(genome,gRNAs,mismatch):
     f=open('data/cas_input.txt','w')
     f.write(genome+'\n')
     f.write('NNNNNNNNNNNNNNNNNNNNNGG\n')
@@ -19,7 +20,8 @@ def cas_input(genome,gRNAs,mismatch,gpu):
         f.write(i[:20] + 'NNN '+str(mismatch)+'\n')
     f.close()
 
-    os.system("CUDA_VISIBLE_DEVICES="+str(gpu)+" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
+    os.system(" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
+    #os.system("CUDA_VISIBLE_DEVICES="+str(gpu)+" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
 
 
 def pot(gid,gRNAs):
@@ -30,13 +32,13 @@ def pot(gid,gRNAs):
     f_gRNA = pd.DataFrame(gRNA_dic,columns=['sgID','gRNA'])
     f_gRNA['pattern'] = f_gRNA.gRNA.apply(lambda x: x[:20])
     f_pot = pd.merge(f_cas, f_gRNA, how='left', on='pattern')
-    f_pot.drop(['pattern'], axis=1, inplace=True)
+    f_pot = f_pot.drop(['pattern'], axis=1)
     f_pot = f_pot.reindex(columns=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch'])
     f_pot.OTS = f_pot.OTS.str.upper()
     f_pot.to_csv('data/pot.tab', sep='\t', index=False)
     f_gRNA = f_pot[f_pot.gRNA==f_pot.OTS]
-    f_gRNA.drop('OTS', axis=1, inplace=True)
-    f_gRNA.to_csv('data/gRNA.tab', sep='\t', index=False)
+    f_gRNA = f_gRNA.drop('OTS', axis=1)
+    f_gRNA.to_csv('data/grna.tab', sep='\t', index=False)
     return f_gRNA, f_pot
 
 
@@ -75,20 +77,20 @@ def encode(f1, en_path, cid, func=epi):
     input = f3.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
     x_sg_off_target = np.array(input).reshape(f3.shape[0], 8, 1, span)
 
-    # fpkl = open('data/encode_off.pkl', 'wb')
-    # pickle.dump([x_sg_off_target, x_ot_off_target], fpkl)
-    # fpkl.close()
-    return x_sg_off_target, x_ot_off_target
+    fpkl = open('data/encode_off.pkl', 'wb')
+    pickle.dump([x_sg_off_target, x_ot_off_target], fpkl)
+    fpkl.close()
+    # return x_sg_off_target, x_ot_off_target
 
 
-def deepots(gpu, f1, x_sg_off_target, x_ot_off_target, step = 1000):
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
-    # f = open('data/encode_off.pkl', 'rb')
-    # x_sg_off_target, x_ot_off_target = pickle.load(f)
-    # f.close()
+def deepots(f1, step = 1000):
+    #os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
+    f = open('data/encode_off.pkl', 'rb')
+    x_sg_off_target, x_ot_off_target = pickle.load(f)
+    f.close()
     sess = tf.InteractiveSession()
     # using regression model, otherwise classification model
-    off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnnofftar_pt_cnn'
+    off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnn'
     is_reg = False
     dcmodel = DCModelOfftar(sess, off_target_model_dir, is_reg)
     offnum = len(x_ot_off_target)
@@ -154,7 +156,7 @@ gRNA_path=args.gRNA
 cell=args.cell
 gen_path=args.genome
 mismatch=args.mismatch
-gpu=args.gpu
+#gpu=args.gpu
 cid_path=args.cid
 en_path=args.encode
 out_path=args.output
@@ -176,15 +178,15 @@ gRNAs = [fa_gRNA[i][:].seq for i in gid]
 fa_gRNA.close()
 
 # first, get POT list of gRNA based on Cas-OFFinder.
-cas_input(gen_path, gRNAs, mismatch, gpu)
+cas_input(gen_path, gRNAs, mismatch)
 f_gRNA, f_pot = pot(gid, gRNAs)
 
 # second, encode ots and predict with deepcrispr
 f_cid=pd.read_csv(cid_path,sep='\t',names=['cid','cell'])
 cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
 
-sg_ots,ot_ots = encode(f_gRNA, en_path, cid)
-f_deep = deepots(gpu,f_pot,sg_ots,ot_ots)
+encode(f_gRNA, en_path, cid)
+f_deep = deepots(f_pot)
 
 # third, join tools' prediction scores
 f_join = score_join(gRNA_path, f_deep)
