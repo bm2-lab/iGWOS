@@ -176,8 +176,6 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
                         default=genome/hg19
       -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
                         default=5
-      -gpu GPU          select a gpu device to perform cas-offinder and
-                        deepcrispr, default=0
       -cid CID          the cell-id file, formed like data/encode_hg19.tab
       -e ENCODE         the encode folder, default=/data/genome/encode
       -o OUTPUT         the output folder, default=data/
@@ -208,10 +206,10 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 
     Format: [encode_path]/[cid]_[epi].fa
     
-    /data/genome/encode/h7_ctcf.fa
-    /data/genome/encode/h7_dnase.fa
-    /data/genome/encode/h7_h3k4me3.fa
-    /data/genome/encode/h7_rrbs.fa
+    /data/genome/encode/fa/h7_ctcf.fa
+    /data/genome/encode/fa/h7_dnase.fa
+    /data/genome/encode/fa/h7_h3k4me3.fa
+    /data/genome/encode/fa/h7_rrbs.fa
     
     
 ## Citation
