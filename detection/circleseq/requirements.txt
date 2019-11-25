@@ -1,6 +1,6 @@
 regex==2016.07.21
 svgwrite==1.1.6
-PyYAML==3.11
+PyYAML==5.1
 pyfaidx==0.2.7
 numpy==1.11.1
 nwalign==0.3.1
