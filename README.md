@@ -2,9 +2,9 @@
 **i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch
 
 ## Introduction
-iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal OTS prediction by aggregating the available OTS prediction tools in a complementary way.   
+iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal OTS prediction by integrating the available OTS prediction tools in a complementary way.   
 * Current data processing supports three OTS detection techniques (GUIDE-seq, CIRCLE-seq, and SITE-seq).  
-* Current integrate method iGWOS, by aggregating CFD and DeepCRISPR, supports conventional NGG-PAM OTS prediction with mismatches up to 6.
+* Current integrate method iGWOS, by integrating CRISPRoff and DeepCRISPR with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 5 for in vitro and cell-based experimental OTS detection.
 
 # NGS Data Processing on OTS Detection Techniques
 
@@ -162,8 +162,8 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 * circos == 0.69-6
 
 ## Usage
-    python3 main.py [-h] [-h] [--version] [-gRNA GRNA] [-cell CELL] [-g GENOME]
-             [-m {0,1,2,3,4,5}] [-gpu GPU] [-cid CID] [-e ENCODE] [-o OUTPUT]
+    python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5}]
+                    [-gpu GPU] [-o OUTPUT] {in-vitro,cell-based} ...
 
     Prediction of CRISPR-Cas9 off-target sites with iGWOS.
     
@@ -171,19 +171,37 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
       -h, --help        show this help message and exit
       -v, --version     show program's version number and exit
       -gRNA GRNA        gRNAs file in Fasta format
-      -cell CELL        the cell-type of performed gRNAs
       -g GENOME         the genome folder for candidate off-target searching,
                         default=genome/hg19
       -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
                         default=5
-      -cid CID          the cell-id file, formed like data/encode_hg19.tab
-      -e ENCODE         the encode folder, default=/data/genome/encode
+      -gpu GPU              select a gpu device to perform cas-offinder and/or
+                        deepcrispr, default=0
       -o OUTPUT         the output folder, default=data/
+      
+    subcommands:
+      select the type of OTS detection technique
 
+      {in-vitro,cell-based}
+        in-vitro            in-vitro CIRCLE-seq
+        cell-based          cell-based techniques
+  
+>when chosing in-vitro
+
+    optional arguments:
+      -h, --help  show this help message and exit
+
+>when chosing cell-based
+
+    optional arguments:
+      -h, --help  show this help message and exit
+      -cell CELL  the cell-type of gRNAs
+      -cid CID    the cell-id file, formed like data/encode_hg19.tab
+      -e ENCODE   the epigenomic encode folder, default=/data/genome/encode/fa/
       
 >Example  
     
-    python3 main.py -gRNA data/grna.fa -cell K562 -g genome/hg19 -m 5 -gpu 0 -cid data/encode_hg19.tab -e /data/genome/encode -o data  
+    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 0 -o data cell-based -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode
 
 >gRNA file format     
 
@@ -192,7 +210,7 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
     >sg2
     GGCCAGGCTTTGGGGAGGCCTGG
 
->cell-id file format: [cid]   [cell]
+>cell-id file format: [cid] [cell]
     
     h1	MCF-7
     h2	GM12878

@@ -9,7 +9,8 @@ from DeepCRISPR.deepcrispr import DCModelOfftar
 from CFD.otscore import calcCfdScore
 from MIT.otscore import calcMitScore
 from CROPIT.otscore import calcCropitScore
-
+from CCTop.otscore import calcCcTopScore
+from sklearn.ensemble import AdaBoostClassifier
 
 # first, get POT list of gRNA based on Cas-OFFinder.
 def cas_input(genome,gRNAs,mismatch):
@@ -76,11 +77,10 @@ def encode(f1, en_path, cid, func=epi):
     f3 = pd.merge(f3, f1, how='inner', on=['sgID', 'gRNA'])
     input = f3.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
     x_sg_off_target = np.array(input).reshape(f3.shape[0], 8, 1, span)
-
+    # return x_sg_off_target, x_ot_off_target
     fpkl = open('data/encode_off.pkl', 'wb')
     pickle.dump([x_sg_off_target, x_ot_off_target], fpkl)
     fpkl.close()
-    # return x_sg_off_target, x_ot_off_target
 
 
 def deepots(f1, step = 1000):
@@ -106,68 +106,76 @@ def deepots(f1, step = 1000):
     f1.to_csv('data/deepcrispr.tab', sep='\t', index=False)
     return f1
 
-
-def score_join(gRNA_path,f):
+def igwosv(gRNA_path, f,output):
     #f = f[f.Mismatch > 0]
-
-    #CFD, MIT, CROP-IT score
+    # CFD, MIT, Cropit, and CCTop score
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
     f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
-    f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
-
-    #crisproff score
+    f['Cropit'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
+    f['CCTop'] = f.apply(lambda row: calcCcTopScore(row['gRNA'], row['OTS']), axis=1)
+    # CRISPRoff score
     os.system("./crisproff.sh "+gRNA_path)
     fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
     f = pd.merge(f, fcroff, how="left", on=['gRNA','OTS','Chr','Strand','Start'])
+    # #uCRISPR score
+    # os.system("./ucrispr.sh ")
+    # fucr = pd.read_csv('data/ucrispr.out', sep=' ', low_memory=False)
+    # f = pd.concat([f, fucr['uCRISPR']], axis=1)
 
-    #uCRISPR score
-    os.system("./ucrispr.sh ")
-    fucr = pd.read_csv('data/ucrispr.out', sep=' ', low_memory=False)
-    f = pd.concat([f, fucr['uCRISPR']], axis=1)
+    # get training data of vitro
+    fv = open('data_vitro.pkl', 'rb')
+    XV,YV = pickle.load(fv)
+    fv.close()
+    #form test data
+    CRISPRoff = f['CRISPRoff']
+    CFD = f['CFD']
+    MIT = f['MIT']
+    Cropit = f['CROP-IT']
+    CCTop = f['CCTop']
+    X = np.stack((CRISPRoff, CFD, MIT, Cropit, CCTop), axis=1)
+    #Adaboost classifier to predict ots score
+    clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
+    f['iGWOS'] = clf.fit(XV, YV).predict_proba(X)[:, 1]
+    f.to_csv('{0}/igwosv.tab'.format(output), sep="\t", index=False)
+    print(f.describe())
+    return(f)
 
-    # save join result
-    f.to_csv('data/join.tab', sep="\t", index=False)
+def igwosc(gRNA_path,f,output):
+    # f = f[f.Mismatch > 0]
+    # MIT score
+    f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
+    # CRISPRoff score
+    os.system("./crisproff.sh " + gRNA_path)
+    fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
+    f = pd.merge(f, fcroff, how="left", on=['gRNA', 'OTS', 'Chr', 'Strand', 'Start'])
+    # get training data of cell
+    fc = open('data_cell.pkl', 'rb')
+    XC, YC = pickle.load(fc)
+    fc.close()
+    # form test data
+    CRISPRoff = f['CRISPRoff']
+    DeepCRISPR = f['DeepCRISPR']
+    MIT = f['MIT']
+    X = np.stack((CRISPRoff, DeepCRISPR, MIT), axis=1)
+    # Adaboost classifier to predict ots score
+    clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
+    f['iGWOS'] = clf.fit(XC, YC).predict_proba(X)[:, 1]
+    f.to_csv('{0}/igwosc.tab'.format(output), sep="\t", index=False)
     print(f.describe())
     return(f)
 
 
-def integ(f,output):
-
-    # normalize
-    #f['CRISPRseek'] = f['CRISPRseek'] / 100
-    #f['CCTop'] = f['CCTop'] / 224
-    f['CROP-IT'] = f['CROP-IT'] / 650
-    f['MIT'] = f['MIT'] / 100
-    f['uCRISPR'] = f['uCRISPR'] / 6.5
-    f['CRISPRoff'] = (f['CRISPRoff'] + 40) / 75
-
-    # integrate prediction to iGWOS
-    tlst = ["CRISPRoff", "uCRISPR", "MIT", "CFD", "DeepCRISPR", "CROP-IT"]
-    weightper = [102.732, 99.673, 98.702, 92.501, 87.856, 82.08]
-    weight = [weightper[i] / 100 for i in range(0, len(weightper))]
-    f['iGWOS_weight'] = np.sum(f[tlst[i]] * weight[i] for i in range(6))
-
-    weight_rank=range(1,7)[::-1]
-    f['iGWOS_rank'] = np.sum(f[tlst[i]] * weight_rank[i] for i in range(6))
-    f.to_csv('{0}/igwos.tab'.format(output), sep="\t", index=False)
-
-
+# parse arguments
 gRNA_path=args.gRNA
-cell=args.cell
 gen_path=args.genome
 mismatch=args.mismatch
 #gpu=args.gpu
-cid_path=args.cid
-en_path=args.encode
 out_path=args.output
 
 if gen_path[-1] == '/':
     gen_path = gen_path[:-1]
-if en_path[-1] == '/':
-    en_path = en_path[:-1]
 if out_path[-1] == '/':
     out_path = out_path[:-1]
-
 if not os.path.exists(out_path):
     os.mkdir(out_path)
 
@@ -181,15 +189,23 @@ fa_gRNA.close()
 cas_input(gen_path, gRNAs, mismatch)
 f_gRNA, f_pot = pot(gid, gRNAs)
 
-# second, encode ots and predict with deepcrispr
-f_cid=pd.read_csv(cid_path,sep='\t',names=['cid','cell'])
-cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
+# parse technique type
+ttype=args.type
 
-encode(f_gRNA, en_path, cid)
-f_deep = deepots(f_pot)
+if ttype=='VITRO':
+    # in-vitro CIRCLE-seq with CRISPRoff, CFD, MIT, Cropit, and CCTop
+    igwosv(gRNA_path,f_pot,out_path)
+elif ttype=='CELL':
+    cell=args.cell
+    cid_path=args.cid
+    en_path=args.encode
+    if en_path[-1] == '/':
+        en_path = en_path[:-1]
+    # encode ots and predict with deepcrispr
+    f_cid=pd.read_csv(cid_path,sep='\t',names=['cid','cell'])
+    cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
+    encode(f_gRNA, en_path, cid)
+    f_deep = deepots(f_pot)
+    # cell-based technique with CRISPRoff, DeepCRISPR, and MIT
+    igwosc(gRNA_path,f_deep,out_path)
 
-# third, join tools' prediction scores
-f_join = score_join(gRNA_path, f_deep)
-
-#fourth, integrate to iGWOS score
-integ(f_join, out_path)
