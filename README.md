@@ -149,7 +149,8 @@ By inputting sequencing data generated from a certain technique, iGWOS returns t
     chr6:9117792-9119815	4	-	ACGTCTGAGCAGAAGAAGAATGG	3	GAGTCCGAGCAGAAGAAGAANGG
 
 > Circos visualization
-    ![off-target profile](img/circos_detection.png)
+
+ ![off-target profile](img/circos_detection.png)
 
 # Integrate prediction tools for precise genome-wide CRISPR OTS prediction
 Predict CRISPR/Cas9-induced off-target cleavage sites by integrating OTS prediction tools (CRISPRoff, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
