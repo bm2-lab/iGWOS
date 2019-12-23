@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/docker.readme" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/docker.readme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,8 +71,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="741">
-                <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+              <first_editor relative-caret-position="367">
+                <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
               </first_editor>
               <second_editor />
             </state>
@@ -626,8 +621,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="741">
-            <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+          <first_editor relative-caret-position="367">
+            <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
           </first_editor>
           <second_editor />
         </state>
