@@ -1,13 +1,15 @@
 # iGWOS
-**i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch
+**i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch platform
 
 ## Introduction
-iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal OTS prediction by integrating the available OTS prediction tools in a complementary way.   
+iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal off-target sites (OTS) prediction by integrating the available OTS prediction tools in a complementary way.   
 * Current data processing supports three OTS detection techniques (GUIDE-seq, CIRCLE-seq, and SITE-seq).  
-* Current integrate method iGWOS, by integrating CRISPRoff and DeepCRISPR with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 5 for in vitro and cell-based experimental OTS detection.
+* Current integrate method iGWOS, by integrating OTS prediction tools with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 5, both for in vitro CIRCLE-seq, and cell-based experimental OTS detection in human species.
 
-# NGS Data Processing on OTS Detection Techniques
+# Integrate NGS data processing on CRISPR OTS detection techniques
+iGWOS integrated a CIRCLE-seq analytic software of 0.1.0 version on GitHub at [https://github.com/tsailabSJ/circleseq](https://github.com/tsailabSJ/circleseq), as well as a GUIDE-seq analysis pipeline of 0.9.0 version on GitHub at [https://github.com/aryeelab/guideseq](https://github.com/aryeelab/guideseq), which were both developed by Shengdar Q Tsai, Martin Aryee, and Ved V Topkar.
 
+By inputting sequencing data generated from a certain technique, iGWOS returns the detected off-target sites on reference genome and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
 
 * HTSeq == 0.6.1    
@@ -140,11 +142,20 @@ iGWOS is designed specifically for an integrate analysis of the high-throughput 
         -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
         -ind2 guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
-# Integrate Method for OTS Prediction
-Predict CRISPR/Cas9 off-target sites by integrating CRISPRoff, uCRISPR, MIT, CFD, DeepCRISPR and CROP-IT.
+> output format
+
+    chr15:44108746-44110769	189	+	GAGTCTAAGCAGAAGAAGAAGAG	3	GAGTCCGAGCAGAAGAAGAANGG
+    chr2:73159981-73162004	489	+	GAGTCCGAGCAGAAGAAGAAGGG	0	GAGTCCGAGCAGAAGAAGAANGG
+    chr6:9117792-9119815	4	-	ACGTCTGAGCAGAAGAAGAATGG	3	GAGTCCGAGCAGAAGAAGAANGG
+
+> Circos visualization
+ ![off-target profile](img/circos_detection.png)
+
+# Integrate prediction tools for precise genome-wide CRISPR OTS prediction
+Predict CRISPR/Cas9-induced off-target cleavage sites by integrating OTS prediction tools (CRISPRoff, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
 The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
-
+By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile as well as the knock-out risk with a Circos plot.
 ## Requirement
 * python == 3.7   
 * pandas == 0.20.1  
@@ -163,7 +174,7 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5}]
-                    [-gpu GPU] [-o OUTPUT] {in-vitro,cell-based} ...
+                    [-gpu GPU] [-o OUTPUT] {VITRO,CELL} ...
 
     Prediction of CRISPR-Cas9 off-target sites with iGWOS.
     
@@ -182,9 +193,9 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
     subcommands:
       select the type of OTS detection technique
 
-      {in-vitro,cell-based}
-        in-vitro            in-vitro CIRCLE-seq
-        cell-based          cell-based techniques
+      {VITRO,CELL}
+        VITRO           in-vitro CIRCLE-seq
+        CELL            cell-based techniques
   
 >when chosing in-vitro
 
@@ -201,7 +212,7 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
       
 >Example  
     
-    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 0 -o data cell-based -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode
+    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 0 -o data CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
 
 >gRNA file format     
 
@@ -232,7 +243,7 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
     
 ## Citation
 
-Jifang Yan, Qi Liu et al. iGWOS.2019(Manuscript submitted)
+Jifang Yan, Qi Liu et al. Benchmark genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
 
 
 ## Contacts

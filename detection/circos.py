@@ -21,7 +21,6 @@ def gen_conf(file='circos_input_file.txt',ref='hg19'):
             'label_size = 18p',
             'padding = 4p',
             '<rules>',
-            '<<include etc/rule2.conf>>',
             '</rules>',
             '</plot>',
             '</plots>',

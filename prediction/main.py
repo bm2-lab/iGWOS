@@ -20,8 +20,9 @@ def cas_input(genome,gRNAs,mismatch):
     for i in gRNAs:
         f.write(i[:20] + 'NNN '+str(mismatch)+'\n')
     f.close()
-
+    print("Make gRNA sequence file for Cas-OFFinder prediction in data/cas_input.txt")
     os.system(" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
+    print("Obtain candidate off-target sites by Cas-OFFinder in data/cas_output.txt")
     #os.system("CUDA_VISIBLE_DEVICES="+str(gpu)+" ./cas-offinder data/cas_input.txt G data/cas_output.txt")
 
 
@@ -37,9 +38,11 @@ def pot(gid,gRNAs):
     f_pot = f_pot.reindex(columns=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch'])
     f_pot.OTS = f_pot.OTS.str.upper()
     f_pot.to_csv('data/pot.tab', sep='\t', index=False)
+    print("Make formatted candidate off-target file in data/pot.tab")
     f_gRNA = f_pot[f_pot.gRNA==f_pot.OTS]
     f_gRNA = f_gRNA.drop('OTS', axis=1)
     f_gRNA.to_csv('data/grna.tab', sep='\t', index=False)
+    print("Make formatted gRNA file in data/grna.tab")
     return f_gRNA, f_pot
 
 
@@ -68,6 +71,7 @@ def encode(f1, en_path, cid, func=epi):
     dnase = Fasta('{0}/{1}_dnase.fa'.format(en_path, cid))
     h3k4me3 = Fasta('{0}/{1}_h3k4me3.fa'.format(en_path, cid))
     rrbs = Fasta('{0}/{1}_rrbs.fa'.format(en_path, cid))
+    print("Encode gRNAs and candidate off-target sites")
 
     f2 = pd.read_csv('data/pot.tab', usecols=[0, 2, 3, 4, 5], sep='\t', low_memory=False)
     input = f2.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
@@ -88,6 +92,7 @@ def deepots(f1, step = 1000):
     f = open('data/encode_off.pkl', 'rb')
     x_sg_off_target, x_ot_off_target = pickle.load(f)
     f.close()
+    print("Predict with DeepCRISPR")
     sess = tf.InteractiveSession()
     # using regression model, otherwise classification model
     off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnn'
@@ -101,14 +106,16 @@ def deepots(f1, step = 1000):
         predicted_off = dcmodel.offtar_predict(x_sg, x_off)
         predicted_off_target.extend(list(predicted_off))
 
-    print("Num of predicted OTS", len(predicted_off_target))
+    print("Number of predicted OTS", len(predicted_off_target))
     f1['DeepCRISPR'] = pd.Series(predicted_off_target)
     f1.to_csv('data/deepcrispr.tab', sep='\t', index=False)
+    print("Obtain prediction result with DeepCRISPR in deepcrispr.tab")
     return f1
 
 def igwosv(gRNA_path, f,output):
     #f = f[f.Mismatch > 0]
     # CFD, MIT, Cropit, and CCTop score
+    print("Integrate CRISPRoff, CFD, MIT, Cropit, and CCTop prediciton scores")
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
     f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
     f['Cropit'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
@@ -123,7 +130,7 @@ def igwosv(gRNA_path, f,output):
     # f = pd.concat([f, fucr['uCRISPR']], axis=1)
 
     # get training data of vitro
-    fv = open('data_vitro.pkl', 'rb')
+    fv = open('data/data_vitro.pkl', 'rb')
     XV,YV = pickle.load(fv)
     fv.close()
     #form test data
@@ -138,18 +145,20 @@ def igwosv(gRNA_path, f,output):
     f['iGWOS'] = clf.fit(XV, YV).predict_proba(X)[:, 1]
     f.to_csv('{0}/igwosv.tab'.format(output), sep="\t", index=False)
     print(f.describe())
+    print("Output iGWOS predicition result in {0}/igwosv.tab".format(output))
     return(f)
 
 def igwosc(gRNA_path,f,output):
     # f = f[f.Mismatch > 0]
     # MIT score
+    print("Integrate CRISPRoff, DeepCRISPR and MIT prediciton scores")
     f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
     # CRISPRoff score
     os.system("./crisproff.sh " + gRNA_path)
     fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
     f = pd.merge(f, fcroff, how="left", on=['gRNA', 'OTS', 'Chr', 'Strand', 'Start'])
     # get training data of cell
-    fc = open('data_cell.pkl', 'rb')
+    fc = open('data/data_cell.pkl', 'rb')
     XC, YC = pickle.load(fc)
     fc.close()
     # form test data
@@ -161,6 +170,7 @@ def igwosc(gRNA_path,f,output):
     clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
     f['iGWOS'] = clf.fit(XC, YC).predict_proba(X)[:, 1]
     f.to_csv('{0}/igwosc.tab'.format(output), sep="\t", index=False)
+    print("Output iGWOS predicition result in {0}/igwosc.tab".format(output))
     print(f.describe())
     return(f)
 
@@ -206,6 +216,6 @@ elif ttype=='CELL':
     cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
     encode(f_gRNA, en_path, cid)
     f_deep = deepots(f_pot)
-    # cell-based technique with CRISPRoff, DeepCRISPR, and MIT
+    # cell-based technique with CRISPRoff, DeepCRISPR,  CFD, and Cropit
     igwosc(gRNA_path,f_deep,out_path)
 

@@ -2,11 +2,11 @@
 
 
 # image build
-docker build -t igwos:1.0 ./
+docker build -t igwos:latest ./
 
 
 # image run
-docker-run --name igwos --volumes-from genome -t 1 igwos:1.0
+docker-run --name igwosyjf --volumes-from genome -t 1 igwos
 
 
 # epigenomic fasta files in data container
