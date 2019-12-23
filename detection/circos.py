@@ -1,29 +1,42 @@
 import subprocess
 
-def gen_conf(file='circos_input_file.txt',ref='hg19'):
+def gen_conf(file='circos_input.txt',ref='hg19'):
     
     if ref == 'hg19':
-        karyotype = 'karyotype.human.hg19.txt'
+        karyotype = 'data/karyotype.human.hg19.txt'
     else:
-        print('no ref for circos existed')
+        print('No reference genome existing for Circos plot')
     
     conf = [
             'karyotype = {0}'.format(karyotype),
             'chromosomes_units = 1000000',
             '<plots>',
-            '<plot>',
-            'type = text',
             'file = {0}'.format(file),
-            'r1 = 1r',
-            'r0 = 0.90r',
-            'color = chr4',
-            'label_font = bold',
-            'label_size = 18p',
+            'type = scatter',
+            '<plot>',
+            'r1 = 0.99r',
+            'r0 = 0.61r',
+            'color = ddgrey',
+            'stroke_color     = black',
+            'stroke_thickness = 1',
+            'glyph            = circle',
+            'glyph_size       = 20p',
+            'max   = 0.013',
+            'min   = 0',
             'padding = 4p',
+            'rpadding = 4p',
             '<rules>',
             '</rules>',
             '</plot>',
             '</plots>',
+            '<highlights>',
+            '<highlight>',
+            'file = data/karyotype.hg19.highlight.txt',
+            'r1 = 0.99',
+            'r0 = 0.60',
+            'fill_color = vvlred',
+            '</highlight>',
+            '</highlights>',
             '<<include etc/ideogram.conf>>',
             '<<include etc/ticks.conf>>',
             '<image>',
@@ -52,8 +65,8 @@ def gen_circos_data(stand_file):
             start,end = s_e.split('-')
             description = sgRNA+'_'+num
             chromosome = chromosome.replace('chr','hs')
-            circos_data.append('\t'.join([chromosome,start,end,description]))
-    with open('circos_input_file.txt','w') as w_f:
+            circos_data.append(' '.join([chromosome,start,end,description]))
+    with open('circos_input.txt','w') as w_f:
         for i in circos_data:
             w_f.write(i)
             w_f.write('\n')
