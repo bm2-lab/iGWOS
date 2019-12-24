@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/data/circos/karyotype.hg19.highlight.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/data/circos/karyotype.human.hg19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/data/circos/karyotype.human.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/data/data_cell.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/data/data_cell.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="245" column="75" selection-start-line="245" selection-start-column="68" selection-end-line="245" selection-end-column="75" />
+              <first_editor relative-caret-position="366">
+                <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -115,8 +108,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-580" />
-    <option name="y" value="43" />
+    <option name="x" value="4" />
+    <option name="y" value="87" />
     <option name="width" value="1934" />
     <option name="height" value="887" />
   </component>
@@ -219,7 +212,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-104" y="60" width="1934" height="887" extended-state="0" />
+    <frame x="4" y="87" width="1934" height="887" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
@@ -608,8 +601,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="245" column="75" selection-start-line="245" selection-start-column="68" selection-end-line="245" selection-end-column="75" />
+          <first_editor relative-caret-position="366">
+            <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
