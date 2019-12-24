@@ -23,8 +23,6 @@ def gen_conf(file='circos_input.txt',ref='hg19'):
             'glyph_size       = 20p',
             'max   = 0.013',
             'min   = 0',
-            'padding = 4p',
-            'rpadding = 4p',
             '<rules>',
             '</rules>',
             '</plot>',

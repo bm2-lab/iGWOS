@@ -3,7 +3,7 @@ dir   = .
 #dir  = conf(configdir)
 file  = circos.png
 png   = yes
-svg   = yes
+svg   = no
 
 # radius of inscribed circle in image
 radius         = 1500p
