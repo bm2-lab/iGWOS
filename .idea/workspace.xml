@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.conf.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/circos.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection/etc/image.generic.conf" beforeDir="false" afterPath="$PROJECT_DIR$/detection/etc/image.generic.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/parse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="parse.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prediction/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -48,8 +45,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="278">
-                <caret line="155" column="31" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
+              <first_editor relative-caret-position="256">
+                <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -84,12 +81,12 @@
         <option value="$PROJECT_DIR$/detection/circleseq/README.MD" />
         <option value="$USER_HOME$/Desktop/deep.txt" />
         <option value="$PROJECT_DIR$/prediction/main2.py" />
-        <option value="$PROJECT_DIR$/prediction/parse.py" />
         <option value="$PROJECT_DIR$/prediction/docker.readme" />
         <option value="$PROJECT_DIR$/detection/circos.conf" />
         <option value="$PROJECT_DIR$/prediction/main.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/detection/circos.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/prediction/parse.py" />
       </list>
     </option>
   </component>
@@ -103,8 +100,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="112" />
-    <option name="y" value="58" />
+    <option name="x" value="46" />
+    <option name="y" value="121" />
     <option name="width" value="1934" />
     <option name="height" value="887" />
   </component>
@@ -207,7 +204,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="87" width="1934" height="887" extended-state="0" />
+    <frame x="46" y="121" width="1934" height="887" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
@@ -589,8 +586,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="278">
-            <caret line="155" column="31" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
+          <first_editor relative-caret-position="256">
+            <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>
@@ -598,8 +595,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prediction/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
       </provider>
     </entry>

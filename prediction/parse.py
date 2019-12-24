@@ -17,8 +17,8 @@ subparsers = parser.add_subparsers(title='subcommands', description='select the 
 parser_v = subparsers.add_parser('VITRO', help='in-vitro CIRCLE-seq')
 #parser_v.add_argument('-x', type=int, help='x value')
 # sub-command cell-based
-parser_c = subparsers.add_parser('CELL', help='cell-based and in vivo techniques')
-# deepcrispr prediction with gRNA encoded in certain cell-type.
+parser_c = subparsers.add_parser('CELL', help='cell-based techniques')
+# deepcrispr prediction with gRNA encoded in certain cell-types.
 parser_c.add_argument('-cell', help='the cell-type of gRNAs',default='K562')
 parser_c.add_argument('-cid', help='the cell-id file, formed like data/encode_hg19.tab', default='data/encode_hg19.tab')
 parser_c.add_argument('-e', dest='encode', help='the epigenomic encode folder, default=/data/genome/encode/fa/',default='/data/genome/encode/fa')
