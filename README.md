@@ -156,7 +156,7 @@ By inputting sequencing data generated from a certain technique, iGWOS returns t
 Predict CRISPR/Cas9-induced off-target cleavage sites by integrating OTS prediction tools (CRISPRoff, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
 The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
-By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile as well as the knock-out risk with a Circos plot.
+By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
 * python == 3.7   
 * pandas == 0.20.1  
@@ -209,18 +209,18 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
       -cid CID    the cell-id file, formed like data/encode_hg19.tab
       -e ENCODE   the epigenomic encode folder, default=/data/genome/encode/fa/
       
->Example  
+## Example  
     
     python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 1 -o data CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
 
->gRNA file format     
+> gRNA file format     
 
     >sg1
     GCCTCCCCAAAGCCTGGCCAGGG
     >sg2
     GGCCAGGCTTTGGGGAGGCCTGG
 
->cell-id file format: [cid] [cell]
+> cell-id file format: [cid] [cell]
     
     h1	MCF-7
     h2	GM12878
@@ -230,7 +230,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     h6	HeLa-S3
     h7	K562
 
->encode folder format (take K562 cell as an example)
+> encode folder format (take K562 cell as an example)
 
     Format: [encode_path]/[cid]_[epi].fa
     
@@ -239,7 +239,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     /data/genome/encode/fa/h7_h3k4me3.fa
     /data/genome/encode/fa/h7_rrbs.fa
     
->output format
+> output format
 
     sgID	gRNA	OTS	Chr	Strand	Start	Mismatch	iGWOS
     sg1	GCCTCCCCAAAGCCTGGCCAGGG	GCCTCCCCAAAAGCTGAGCAGGG	chr1	+	929401	4	0.3254589692131059
