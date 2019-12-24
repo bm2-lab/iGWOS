@@ -194,14 +194,14 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 
       {VITRO,CELL}
         VITRO           in-vitro CIRCLE-seq
-        CELL            cell-based techniques
+        CELL            cell-based and in vivo techniques
   
->when chosing in-vitro
+>when chosing VITRO
 
     optional arguments:
       -h, --help  show this help message and exit
 
->when chosing cell-based
+>when chosing CELL
 
     optional arguments:
       -h, --help  show this help message and exit
