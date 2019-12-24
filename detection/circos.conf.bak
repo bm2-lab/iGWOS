@@ -17,6 +17,10 @@ glyph_size       = 20p
 max   = 0.013
 min   = 0
 
+## padding  - text margin in angular direction
+padding = 4p
+# rpadding - text margin in radial direction
+rpadding = 4p
 
 <rules>
 </rules>

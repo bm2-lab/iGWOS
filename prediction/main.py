@@ -112,15 +112,15 @@ def deepots(f1, step = 1000):
     print("Obtain prediction result with DeepCRISPR in deepcrispr.tab")
     return f1
 
-def igwosv(gRNA_path, f,output):
+def igwosv(gRNA_path,genome, f,output):
     #f = f[f.Mismatch > 0]
     # CFD, MIT, Cropit, and CCTop score
-    print("Integrate CRISPRoff, CFD, MIT, Cropit, and CCTop prediciton scores")
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
     f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
-    f['Cropit'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
+    f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
     f['CCTop'] = f.apply(lambda row: calcCcTopScore(row['gRNA'], row['OTS']), axis=1)
     # CRISPRoff score
+    print('Calculate CRISPRoff score')
     os.system("./crisproff.sh "+gRNA_path)
     fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
     f = pd.merge(f, fcroff, how="left", on=['gRNA','OTS','Chr','Strand','Start'])
@@ -141,19 +141,25 @@ def igwosv(gRNA_path, f,output):
     CCTop = f['CCTop']
     X = np.stack((CRISPRoff, CFD, MIT, Cropit, CCTop), axis=1)
     #Adaboost classifier to predict ots score
+    print("Integrate CRISPRoff, CFD, MIT, Cropit, and CCTop prediciton scores")
     clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
     f['iGWOS'] = clf.fit(XV, YV).predict_proba(X)[:, 1]
+    #f['iGWOS'] = f.iGWOS.apply(lambda x: x ** 3)
+    order = ['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch', 'iGWOS']
+    f = f[order]
     f.to_csv('{0}/igwosv.tab'.format(output), sep="\t", index=False)
-    print(f.describe())
     print("Output iGWOS predicition result in {0}/igwosv.tab".format(output))
-    return(f)
+    print(f.describe())
+    print("visualize the genome-wide off-target profile with the circos plot")
+    print(genome,output)
+    os.system("./circos.sh {0}/igwosv.tab {1}".format(output,genome))
 
-def igwosc(gRNA_path,f,output):
+def igwosc(gRNA_path,genome,f,output):
     # f = f[f.Mismatch > 0]
-    # MIT score
-    print("Integrate CRISPRoff, DeepCRISPR and MIT prediciton scores")
-    f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
+    f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
+    f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
     # CRISPRoff score
+    print('Calculate CRISPRoff score')
     os.system("./crisproff.sh " + gRNA_path)
     fcroff = pd.read_csv('data/crisproff.tab', sep='\t', low_memory=False)
     f = pd.merge(f, fcroff, how="left", on=['gRNA', 'OTS', 'Chr', 'Strand', 'Start'])
@@ -164,20 +170,29 @@ def igwosc(gRNA_path,f,output):
     # form test data
     CRISPRoff = f['CRISPRoff']
     DeepCRISPR = f['DeepCRISPR']
-    MIT = f['MIT']
-    X = np.stack((CRISPRoff, DeepCRISPR, MIT), axis=1)
+    CFD = f['CFD']
+    Cropit = f['CROP-IT']
+    X = np.stack((CRISPRoff, DeepCRISPR, CFD, Cropit), axis=1)
     # Adaboost classifier to predict ots score
+    print("Integrate CRISPRoff, DeepCRISPR, CFD, and Cropit prediciton scores")
     clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
     f['iGWOS'] = clf.fit(XC, YC).predict_proba(X)[:, 1]
+    #f['iGWOS'] = f.iGWOS.apply(lambda x: x**3)
+    order=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch','iGWOS']
+    f=f[order]
     f.to_csv('{0}/igwosc.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwosc.tab".format(output))
     print(f.describe())
-    return(f)
+    print(genome, output)
+    print("visualize the genome-wide off-target profile with the circos plot")
+    os.system("./circos.sh {0}/igwosc.tab {1}".format(output,genome))
+
 
 
 # parse arguments
 gRNA_path=args.gRNA
 gen_path=args.genome
+genome = os.path.split(gen_path)[1]
 mismatch=args.mismatch
 #gpu=args.gpu
 out_path=args.output
@@ -204,7 +219,7 @@ ttype=args.type
 
 if ttype=='VITRO':
     # in-vitro CIRCLE-seq with CRISPRoff, CFD, MIT, Cropit, and CCTop
-    igwosv(gRNA_path,f_pot,out_path)
+    f_igwos=igwosv(gRNA_path,genome,f_pot,out_path)
 elif ttype=='CELL':
     cell=args.cell
     cid_path=args.cid
@@ -217,5 +232,4 @@ elif ttype=='CELL':
     encode(f_gRNA, en_path, cid)
     f_deep = deepots(f_pot)
     # cell-based technique with CRISPRoff, DeepCRISPR,  CFD, and Cropit
-    igwosc(gRNA_path,f_deep,out_path)
-
+    f_igwos =igwosc(gRNA_path,genome,f_deep,out_path)

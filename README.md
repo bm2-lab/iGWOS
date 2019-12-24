@@ -169,8 +169,6 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 * biopython == 1.73
 * ViennaRNA == 2.4.12
 * RIsearch == 2.1
-* uCRISPR == 0.1
-* RNAstructure == 6.1
 * circos == 0.69-6
 
 ## Usage
@@ -213,7 +211,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
       
 >Example  
     
-    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 0 -o data CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
+    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 1 -o data CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
 
 >gRNA file format     
 
@@ -241,6 +239,16 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     /data/genome/encode/fa/h7_h3k4me3.fa
     /data/genome/encode/fa/h7_rrbs.fa
     
+>output format
+
+    sgID	gRNA	OTS	Chr	Strand	Start	Mismatch	iGWOS
+    sg1	GCCTCCCCAAAGCCTGGCCAGGG	GCCTCCCCAAAAGCTGAGCAGGG	chr1	+	929401	4	0.3254589692131059
+    sg1	GCCTCCCCAAAGCCTGGCCAGGG	TGCTCCCCAGAGCCTAGCCGTGG	chr7	-	1900836	5	0.46115958387343875
+    sg1	GCCTCCCCAAAGCCTGGCCAGGG	ACCTCCCCATAGCCTGGCCAGGG	chr11	-	44986455	2	0.529510001952807
+ 
+> Circos visualization
+
+ ![off-target profile](img/circos_igwos.svg) 
     
 ## Citation
 

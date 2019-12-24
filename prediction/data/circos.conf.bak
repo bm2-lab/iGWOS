@@ -1,0 +1,97 @@
+karyotype = data/karyotype.human.hg19.txt
+chromosomes_units = 1000000
+<plots>
+file = circos_input.txt
+type = scatter
+fill_color = yellow
+color = black
+stroke_color = black
+stroke_thickness = 1
+glyph            = circle
+glyph_size       = 20p
+#the range of values to show on circos
+max   = 1
+min   = 0
+show=yes
+
+<plot>
+r1    = 0.99r
+r0    = 0.60r
+
+<backgrounds>
+<background>
+color     = vlred
+y0        = 0.9r
+</background>
+<background>
+color     = vlyellow
+y1        = 0.9r
+y0        = 0.5r
+</background>
+<background>
+color     = vlgreen
+y1        = 0.5r
+</background>
+</backgrounds>
+
+<axes>
+<axis>
+color     = lred
+thickness = 1
+spacing   = 0.05r
+y0        = 0.9r
+</axis>
+<axis>
+color     = dred
+thickness = 2
+spacing   = 0.1r
+y0        = 0.9r
+</axis>
+
+<axis>
+color     = lyellow
+thickness = 1
+spacing   = 0.05r
+y1        = 0.9r
+y0        = 0.5r
+</axis>
+<axis>
+color     = dyellow
+thickness = 2
+spacing   = 0.1r
+y1        = 0.9r
+y0        = 0.5r
+</axis>
+
+<axis>
+color     = lgreen
+thickness = 1
+spacing   = 0.05r
+y1        = 0.5r
+</axis>
+
+<axis>
+color     = dgreen
+thickness = 2
+spacing   = 0.1r
+y1        = 0.5r
+</axis>
+
+</axes>
+
+<rules>
+
+</rules>
+
+</plot>
+
+</plots>
+
+
+<<include etcp/ideogram.conf>>
+<<include etc/ticks.conf>>
+<image>
+<<include etc/image.conf>>
+</image>
+<<include etc/colors_fonts_patterns.conf>>
+<<include etc/housekeeping.conf>>
