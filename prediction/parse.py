@@ -11,7 +11,7 @@ parser.add_argument('-gpu', help='select a gpu device to perform cas-offinder an
 # output file
 parser.add_argument('-o',dest='output',help='the output folder, default=output/',default='output')
 # circos plot
-parser.add_argument('-cp',dest='circos',help='whether to draw a circos plot to visualize the predicted off-target profile, default=1',type=int, default=1,choices=[0,1])
+parser.add_argument('-circos',dest='circos',help='whether to draw a circos plot to visualize the predicted off-target profile, default=1',type=int, default=1,choices=[0,1])
 
 # OTS prediction on in-vitro or cell-based technique
 subparsers = parser.add_subparsers(title='subcommands', description='select the type of OTS detection technique', dest='type')
