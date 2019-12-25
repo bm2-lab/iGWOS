@@ -2,12 +2,12 @@
 **i**ntegrated **G**enome-**W**ide **O**ff-target cleavage **S**earch platform
 
 ## Introduction
-iGWOS is designed specifically for an integrate analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for optimal off-target sites (OTS) prediction by integrating the available OTS prediction tools in a complementary way.   
+iGWOS is designed specifically for an integrative analysis of the high-throughput sequencing data generated from various mainstream CRISPR/SpCas9 off-target detection techniques, as well as for the optimal off-target sites (OTS) prediction by integrating the available OTS prediction tools in a complementary way.   
 * Current data processing supports three OTS detection techniques (GUIDE-seq, CIRCLE-seq, and SITE-seq).  
-* Current integrate method iGWOS, by integrating OTS prediction tools with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 5, both for in vitro CIRCLE-seq, and cell-based experimental OTS detection in human species.
+* Current integrative method iGWOS, by integrating OTS prediction tools with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 5, both for in vitro CIRCLE-seq, and cell-based experimental OTS detection in human species.
 
-# Integrate NGS data processing on CRISPR OTS detection techniques
-iGWOS integrated a CIRCLE-seq analytic software of 0.1.0 version on GitHub at [https://github.com/tsailabSJ/circleseq](https://github.com/tsailabSJ/circleseq), as well as a GUIDE-seq analysis pipeline of 0.9.0 version on GitHub at [https://github.com/aryeelab/guideseq](https://github.com/aryeelab/guideseq), which were both developed by Shengdar Q Tsai, Martin Aryee, and Ved V Topkar.
+# Integrative NGS data processing for CRISPR OTS detection techniques
+iGWOS integrated the CIRCLE-seq analytic software of 0.1.0 version on GitHub at [https://github.com/tsailabSJ/circleseq](https://github.com/tsailabSJ/circleseq), as well as the GUIDE-seq analysis pipeline of 0.9.0 version on GitHub at [https://github.com/aryeelab/guideseq](https://github.com/aryeelab/guideseq), which were both developed by Shengdar Q Tsai, Martin Aryee, and Ved V Topkar.
 
 By inputting sequencing data generated from a certain technique, iGWOS returns the detected off-target sites on reference genome and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
@@ -152,8 +152,8 @@ By inputting sequencing data generated from a certain technique, iGWOS returns t
 
  ![off-target profile](img/circos_detection.svg)
 
-# Integrate prediction tools for precise genome-wide CRISPR OTS prediction
-Predict CRISPR/Cas9-induced off-target cleavage sites by integrating OTS prediction tools (CRISPRoff, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
+# Integrative prediction tools for precise genome-wide CRISPR OTS prediction
+Predict CRISPR/Cas9-induced off-target cleavage sites by integrating distinct OTS prediction tools (CRISPRoff, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
 The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
 By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile with a Circos plot.
@@ -185,7 +185,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
                         default=genome/hg19
       -m {0,1,2,3,4,5}  the maximum mismatch allowed in off-target prediction,
                         default=5
-      -gpu GPU              select a gpu device to perform cas-offinder and/or
+      -gpu GPU          select a gpu device to perform cas-offinder and/or
                         deepcrispr, default=0
       -o OUTPUT         the output folder, default=data/
       
