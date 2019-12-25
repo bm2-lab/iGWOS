@@ -143,9 +143,9 @@ def igwosv(gRNA_path, f,output):
     #Adaboost classifier to predict ots score
     print("Integrate CRISPRoff, CFD, MIT, Cropit, and CCTop prediciton scores")
     clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
-    f['iGWOS'] = clf.fit(XV, YV).predict_proba(X)[:, 1]
+    f['iGWOS_score'] = clf.fit(XV, YV).predict_proba(X)[:, 1]
     #f['iGWOS'] = f.iGWOS.apply(lambda x: x ** 3)
-    order = ['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch', 'iGWOS']
+    order = ['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch', 'iGWOS_score']
     f = f[order]
     f.to_csv('{0}/igwosv.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwosv.tab".format(output))
@@ -174,9 +174,9 @@ def igwosc(gRNA_path,f,output):
     # Adaboost classifier to predict ots score
     print("Integrate CRISPRoff, DeepCRISPR, CFD, and Cropit prediciton scores")
     clf = AdaBoostClassifier(random_state=1, n_estimators=50, algorithm='SAMME.R')
-    f['iGWOS'] = clf.fit(XC, YC).predict_proba(X)[:, 1]
+    f['iGWOS_score'] = clf.fit(XC, YC).predict_proba(X)[:, 1]
     #f['iGWOS'] = f.iGWOS.apply(lambda x: x**3)
-    order=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch','iGWOS']
+    order=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start', 'Mismatch','iGWOS_score']
     f=f[order]
     f.to_csv('{0}/igwosc.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwosc.tab".format(output))
