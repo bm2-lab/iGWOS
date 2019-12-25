@@ -109,10 +109,10 @@ def deepots(f1, step = 1000):
     print("Number of predicted OTS", len(predicted_off_target))
     f1['DeepCRISPR'] = pd.Series(predicted_off_target)
     f1.to_csv('data/deepcrispr.tab', sep='\t', index=False)
-    print("Obtain prediction result with DeepCRISPR in deepcrispr.tab")
+    print("Obtain prediction result with DeepCRISPR in data/deepcrispr.tab")
     return f1
 
-def igwosv(gRNA_path,genome, f,output):
+def igwosv(gRNA_path, f,output):
     #f = f[f.Mismatch > 0]
     # CFD, MIT, Cropit, and CCTop score
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
@@ -150,11 +150,9 @@ def igwosv(gRNA_path,genome, f,output):
     f.to_csv('{0}/igwosv.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwosv.tab".format(output))
     print(f.describe())
-    print("visualize the genome-wide off-target profile with the circos plot")
-    print(genome,output)
-    os.system("./circos.sh {0}/igwosv.tab {1}".format(output,genome))
 
-def igwosc(gRNA_path,genome,f,output):
+
+def igwosc(gRNA_path,f,output):
     # f = f[f.Mismatch > 0]
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
     f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
@@ -183,10 +181,6 @@ def igwosc(gRNA_path,genome,f,output):
     f.to_csv('{0}/igwosc.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwosc.tab".format(output))
     print(f.describe())
-    print(genome, output)
-    print("visualize the genome-wide off-target profile with the circos plot")
-    os.system("./circos.sh {0}/igwosc.tab {1}".format(output,genome))
-
 
 
 # parse arguments
@@ -196,6 +190,7 @@ genome = os.path.split(gen_path)[1]
 mismatch=args.mismatch
 #gpu=args.gpu
 out_path=args.output
+cp=args.circos
 
 if gen_path[-1] == '/':
     gen_path = gen_path[:-1]
@@ -219,7 +214,10 @@ ttype=args.type
 
 if ttype=='VITRO':
     # in-vitro CIRCLE-seq with CRISPRoff, CFD, MIT, Cropit, and CCTop
-    f_igwos=igwosv(gRNA_path,genome,f_pot,out_path)
+    f_igwos=igwosv(gRNA_path,f_pot,out_path)
+    if cp == 1:
+        print("visualize the genome-wide off-target profile with the circos plot")
+        os.system("./circos.sh {0}/igwosv.tab {1} {2}".format(out_path, genome,out_path))
 elif ttype=='CELL':
     cell=args.cell
     cid_path=args.cid
@@ -232,4 +230,7 @@ elif ttype=='CELL':
     encode(f_gRNA, en_path, cid)
     f_deep = deepots(f_pot)
     # cell-based technique with CRISPRoff, DeepCRISPR,  CFD, and Cropit
-    f_igwos =igwosc(gRNA_path,genome,f_deep,out_path)
+    f_igwos =igwosc(gRNA_path,f_deep,out_path)
+    if cp==1:
+        print("visualize the genome-wide off-target profile with the circos plot")
+        os.system("./circos.sh {0}/igwosc.tab {1} {2}".format(out_path,genome,out_path))

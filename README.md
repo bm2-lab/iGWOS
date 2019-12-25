@@ -188,6 +188,9 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
       -gpu GPU              select a gpu device to perform cas-offinder and/or
                         deepcrispr, default=0
       -o OUTPUT         the output folder, default=data/
+      -cp {0,1}         whether to draw a circos plot to visualize the predicted
+                    off-target profile, default=1
+
       
     subcommands:
       select the type of OTS detection technique
@@ -211,7 +214,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
       
 ## Example  
     
-    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 1 -o data CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
+    python3 main.py -gRNA data/grna.fa -g genome/hg19 -m 5 -gpu 1 -o output -cp 1 CELL -cell K562 -cid data/encode_hg19.tab -e /data/genome/encode/fa/
 
 > gRNA file format     
 

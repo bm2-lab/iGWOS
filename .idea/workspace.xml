@@ -3,6 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/circos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/circos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/circos.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/data/karyotype.hg19.highlight.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/data/karyotype.human.hg19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/data/karyotype.human.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/BREWER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/background.black.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/background.white.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/brewer.all.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/brewer.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors.brewer.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors.hsv.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors.ucsc.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors.unix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/colors_fonts_patterns.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/fonts.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/gddiag.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/housekeeping.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/ideogram.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/image.black.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/image.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/image.generic.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/makehuesteps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/patterns.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/patterns.svg.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/pred.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/ticks.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/axis.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/connector.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/heatmap.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/highlight.bg.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/highlight.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/histogram.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/line.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/link.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/scatter.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/text.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/data/etc/tracks/tile.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prediction/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/parse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,23 +62,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prediction/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parse.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prediction/parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="352">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -45,10 +75,22 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="256">
-                <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+              <first_editor relative-caret-position="264">
+                <caret line="216" column="75" selection-start-line="216" selection-start-column="75" selection-end-line="216" selection-end-column="75" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prediction/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3560">
+              <caret line="228" column="47" lean-forward="true" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,10 +125,10 @@
         <option value="$PROJECT_DIR$/prediction/main2.py" />
         <option value="$PROJECT_DIR$/prediction/docker.readme" />
         <option value="$PROJECT_DIR$/detection/circos.conf" />
-        <option value="$PROJECT_DIR$/prediction/main.py" />
         <option value="$PROJECT_DIR$/detection/circos.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/prediction/parse.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/prediction/main.py" />
       </list>
     </option>
   </component>
@@ -100,8 +142,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
-    <option name="y" value="121" />
+    <option name="x" value="8" />
+    <option name="y" value="46" />
     <option name="width" value="1934" />
     <option name="height" value="887" />
   </component>
@@ -204,21 +246,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="121" width="1934" height="887" extended-state="0" />
+    <frame x="8" y="46" width="1934" height="887" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.24026696" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49946696" visible="true" weight="0.29178083" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49946696" weight="0.29178083" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.19354838" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48549324" visible="true" weight="0.14354323" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.269863" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4859287" visible="true" weight="0.14354323" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.51450676" side_tool="true" visible="true" weight="0.14354323" />
+      <window_info id="Structure" order="1" sideWeight="0.5140713" side_tool="true" visible="true" weight="0.14354323" />
       <window_info id="Favorites" order="2" sideWeight="0.50153375" side_tool="true" weight="0.14698938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -573,30 +615,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prediction/main.py">
+    <entry file="file://$PROJECT_DIR$/prediction/parse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="352">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="256">
-            <caret line="196" column="34" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+          <first_editor relative-caret-position="264">
+            <caret line="216" column="75" selection-start-line="216" selection-start-column="75" selection-end-line="216" selection-end-column="75" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prediction/parse.py">
+    <entry file="file://$PROJECT_DIR$/prediction/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="3560">
+          <caret line="228" column="47" lean-forward="true" selection-start-line="228" selection-start-column="47" selection-end-line="228" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

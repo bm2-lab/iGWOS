@@ -9,7 +9,9 @@ parser.add_argument('-g', dest='genome', help='the genome folder for candidate o
 parser.add_argument('-m', dest='mismatch', help='the maximum mismatch allowed in off-target prediction, default=5', type=int, default=5, choices=range(6))
 parser.add_argument('-gpu', help='select a gpu device to perform cas-offinder and/or deepcrispr, default=0', type=int, default=0)
 # output file
-parser.add_argument('-o',dest='output',help='the output folder, default=data/',default='data')
+parser.add_argument('-o',dest='output',help='the output folder, default=output/',default='output')
+# circos plot
+parser.add_argument('-cp',dest='circos',help='whether to draw a circos plot to visualize the predicted off-target profile, default=1',type=int, default=1,choices=[0,1])
 
 # OTS prediction on in-vitro or cell-based technique
 subparsers = parser.add_subparsers(title='subcommands', description='select the type of OTS detection technique', dest='type')
