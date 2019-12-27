@@ -8,7 +8,7 @@ Created on Wed Sep  6 18:58:04 2017
 import argparse
 
 def gen_arg():
-    parser = argparse.ArgumentParser(description='we devote to the exploration of CRISPR/Cas mechanism and optimization')
+    parser = argparse.ArgumentParser(description='Integrative NGS data processing for CRISPR OTS detection techniques')
     parser.add_argument('-UID', metavar='userid', type=str,nargs='?',
                         dest='userid',
                         help='user id, necessary is -U is True, for the determination of data source')
@@ -31,7 +31,7 @@ def gen_arg():
                         dest='read2',
                         help='treated sequencing data 2, if sequencing data is single-end, read1 is only necessary')
     subparsers =parser.add_subparsers(help = 'the experimental method of the data')
-    parser_a = subparsers.add_parser('GUIDE-seq',help = 'genome-wide, unbiased identification of DSBs enabled by sequencing')
+    parser_a = subparsers.add_parser('GUIDE-seq',help = 'genome-wide unbiased identification of DSBs enabled by sequencing')
     parser_a.add_argument('-m', metavar='method', type=str, nargs='?',
                         dest='method',
                         default = 'GUIDE-seq',
@@ -109,7 +109,7 @@ def gen_arg():
                         dest='merged_analysis',
                         default=True,
                         help='Whether or not the paired read merging step should takingTrue\nnecessary in CIRCLE-seq with default value True')
-    parser_c = subparsers.add_parser('SITE-seq',help = 'a biochemical method that uses the selective enrichment and identification of tagged genomic DNA ends by sequencing\n it should be noticed that the data provided by the paper has some problem and the data do not accord the mechanism of SITE-seq\nso we can not test the correctness of this part')
+    parser_c = subparsers.add_parser('SITE-seq',help = 'selective enrichment and identification of tagged genomic DNA ends by sequencing. It should be noticed that the data provided by the paper has some problems and the data is not in accordance with the mechanism of SITE-seq. So we can not test the correction of this part')
     parser_c.add_argument('-m', metavar='method', type=str, nargs='?',
                         dest='-method',
                         default = 'SITE-seq',

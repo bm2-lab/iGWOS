@@ -12,135 +12,89 @@ iGWOS integrated the CIRCLE-seq analytic software of 0.1.0 version on GitHub at 
 By inputting sequencing data generated from a certain technique, iGWOS returns the detected off-target sites on reference genome and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
 
-* HTSeq == 0.6.1    
-* PyYAML == 3.11    
+* HTSeq == 0.11.2    
+* PyYAML == 3.12    
 * swalign == 0.3.1  
 * pyfaidx == 0.2.7  
 * svgwrite == 1.1.6     
 * regex == 2016.07.21   
-* numpy == 1.11.1   
-* nwalign == 0.3.1  
+* nwalign == 0.3.1   
+* numpy == 1.11.1  
 * statsmodels == 0.6.1  
 * pysam == 0.9.1.4 
+* paramiko == 2.7.1
 
 ## Usage
-	python [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
+	python Plt_main.py [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
 	
 #### option0:    
-    -h --help :
-        show the help message
-    -UID:
-        user id, necessary if -U is True, for the determination of data source
-    -D:
-        description of sgRNA
-    -U:
-        if you are willing to upload part of your data and share them to all the researchers of CRIPSR
-    -O:
-        output folder
-    -L:
-        the name of CRISPR/Cas which you use in the experiment
-    -r1:
-        treated sequencing data 1, it need to be noticed that different methods require different types of input data
-    -r2:
-        treated sequencing data 2, if sequencing data is single-end, read1 is only necessary
-        
+    -h, --help            show this help message and exit
+    -UID [userid]         user id, necessary is -U is True, for the
+                          determination of data source
+    -D [description]      description of sgRNA
+    -U [upload]           if you are willing to upload part of your data and
+                          share them to all the researchers of CRIPSR/Cas
+    -O [output]           output folder
+    -L [label]            the name of CRISPR/Cas which you use in the experiment
+    -r1 [read1]           treated sequencing data 1, it need to be noticed that
+                          different methods require different types of input data
+    -r2 [read2]           treated sequencing data 2, if sequencing data is
+                          single-end, read1 is only necessary
+       
 #### option1:
    option1 is different when chosing different experiment method
     
 >when chosing GUIDE-seq   
 
-    -m:
-        DO NOT FILL ANY VALUE FOR THIS PARAMETER
-    -F:
-        /path/to/reference_genome.fa
-    -R:
-        target sequence including PAM
-    -bar1:
-        barcode 1, 
-        necessary
-    -bar2:
-        barcode 2,
-        necessary
-    -cbar1:
-        control barcode 1, 
-        necessary
-    -cbar2:
-        control barcode 2, 
-        necessary
-    -ind1:
-        index 1, 
-        necessary
-    -ind2:
-        index 2, 
-        necessary
-    --d-minreads:
-        demultiplex_min_reads, 
-        necessary with default 1000
+    -m [method]           DO NOT FILL ANY VALUE FOR THIS PARAMETER
+    -F [reference]        /path/to/reference_genome.fa
+    -R [target]           target sequence including PAM
+    -bar1 [barcode1]      barcode 1, necessary in GUIDE-seq
+    -bar2 [barcode2]      barcode 2, necessary in GUIDE-seq
+    -cbar1 [cbarcode1]    control barcode 1, necessary in GUIDE-seq
+    -cbar2 [cbarcode2]    control barcode 2, necessary in GUIDE-seq
+    -ind1 [index1]        index 1, necessary in GUIDE-seq
+    -ind2 [index2]        index 2, necessary in GUIDE-seq
+    --d-minreads [demultiplex_min_reads]
+                          demultiplex_min_reads, parameters necessary in GUIDE-
+                          seq, default is 1000
 			
 >when chosing CIRCLE-seq   
 
-    -m:
-        DO NOT FILL ANY VALUE FOR THIS PARAMETER
-    -F:
-        /path/to/reference_genome.fa
-    -R:
-        target sequence including PAM
-    -cr1:
-        control sequencing data 1
-        necessary
-    -cr2:
-        control sequencing data 2
-        necessary
-    -rt:
-        The minimum number of reads at a location for that location to be called as a site, 
-        necessary and with default 4
-    -ws:
-        size of the sliding window, 
-        necessary and with default 3
-    -mqt:
-        Minimum read mapping quality score, 
-        necessary and with default 50
-    -st:
-        Tolerance for breakpoint location, 
-        necessary and with default 1
-    -gt:
-        Number of tolerated gaps in the fuzzy target search step, 
-        necessary and with default 3
-    -mt:
-        Number of tolerated gaps in the fuzzy target search setp, 
-        necessary and with default 6
-    -ma:
-        Whether or not the paired read merging step should takingTrue, 
-        necessary and with default True
+    -m [method]           DO NOT FILL ANY VALUE FOR THIS PARAMETER
+    -F [reference]        /path/to/reference_genome.fa
+    -R [target]           target sequence including PAM
+    -cr1 [cread1]         control sequencing data 1
+    -cr2 [cread2]         control sequencing data 2
+    -rt [read_threshold]  The minimum number of reads at a location for that
+                          location to be called as a site necessary in CIRCLE-
+                          seq with default value 4
+    -ws [window_size]     size of the sliding window necessary in CIRCLE-seq
+                          with default value 3
+    -mqt [mapq_threshold]
+                          Minimum read mapping quality score necessary in
+                          CIRCLE-seq with default value 50
+    -st [start_threshold]
+                          Tolerance for breakpoint location necessary in CIRCLE-
+                          seq with default value 1
+    -gt [gap_threshold]   Number of tolerated gaps in the fuzzy target search
+                          setp necessary in CIRCLE-seq with default value 3
+    -mt [mismatch_threshold]
+                          Number of tolerated gaps in the fuzzy target search
+                          setp necessary in CIRCLE-seq with default value 6
+    -ma [merged_analysis]
+                          Whether or not the paired read merging step should
+                          takingTrue necessary in CIRCLE-seq with default value True
 		
 >when chosing SITE-seq  
 
-    -m:
-        DO NOT FILL ANY VALUE FOR THIS PARAMETER
-    -F:
-        /path/to/reference_genome.fa
-    -R:
-        target sequence including PAM
+    -m [method]           DO NOT FILL ANY VALUE FOR THIS PARAMETER
+    -R [target]           target sequence including PAM
+    -F [reference]        /path/to/reference_genome.fa
 					
 ## Example  
 
-    python Plt_main.py 
-        -UID test_OTS
-        -D EMX_site1
-        -U false
-        -O test_ouput/
-        -L test_0 
-        -r1 guideseq/test/data/undemultiplexed/undemux.r1.fastq 
-        -r2 guideseq/test/data/undemultiplexed/undemux.r2.fastq
-        GUIDE-seq 
-        -F guideseq/test/test_genome.fa 
-        -R GAGTCCGAGCAGAAGAAGAANGG
-        -bar1 TAGGCATG
-        -bar2 TAGATCGC
-        -cbar1 CTCTCTAC
-        -cbar2 CTCTCTAT
-        -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq
-        -ind2 guideseq/test/data/undemultiplexed/undemux.i2.fastq
+    python Plt_main.py -UID test_OTS -D EMX_site1 -U false -O test_ouput -L test_0 -r1 guideseq/test/data/undemultiplexed/undemux.r1.fastq -r2 guideseq/test/data/undemultiplexed/undemux.r2.fastq GUIDE-seq -F guideseq/test/test_genome.fa -R GAGTCCGAGCAGAAGAAGAANGG -bar1 TAGGCATG -bar2 TAGATCGC -cbar1 CTCTCTAC -cbar2 CTCTCTAT -ind1 guideseq/test/data/undemultiplexed/undemux.i1.fastq -ind2 guideseq/test/data/undemultiplexed/undemux.i2.fastq
 
 > output format
 
@@ -175,7 +129,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5}]
                     [-gpu GPU] [-o OUTPUT] {VITRO,CELL} ...
 
-    Prediction of CRISPR-Cas9 off-target sites with iGWOS.
+    Integrative prediction tools for precise genome-wide CRISPR OTS prediction
     
     optional arguments:
       -h, --help        show this help message and exit

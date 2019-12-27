@@ -99,7 +99,7 @@ def trans_siteseq(uid,args):
         base_num = upload_data[max_n][1]
     else:
         target_seq = args.target
-        for i in raneg(len(upload_data)):
+        for i in range(len(upload_data)):
             if upload_data[i][0] == target_seq:
                 base_num = upload_data[i][1]
                 max_n = i

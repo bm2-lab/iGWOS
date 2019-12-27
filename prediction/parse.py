@@ -1,6 +1,6 @@
 import argparse
 # iGWOS description and version
-parser = argparse.ArgumentParser(prog='iGWOS', description="Prediction of CRISPR-Cas9 off-target sites with iGWOS.")
+parser = argparse.ArgumentParser(prog='iGWOS', description="Integrative prediction tools for precise genome-wide CRISPR OTS prediction")
 parser.add_argument('-v','--version', action='version', version='%(prog)s 1.0')
 # gRNAs file input for off-target prediction
 parser.add_argument('-gRNA',help='gRNAs file in Fasta format', default='data/grna.fa')
