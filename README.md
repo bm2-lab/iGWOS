@@ -12,20 +12,29 @@ iGWOS integrated the CIRCLE-seq analytic software of 0.1.0 version on GitHub at 
 By inputting sequencing data generated from a certain technique, iGWOS returns the detected off-target sites on reference genome and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
 
-* HTSeq == 0.11.2    
-* PyYAML == 3.12    
-* swalign == 0.3.1  
-* pyfaidx == 0.2.7  
-* svgwrite == 1.1.6     
-* regex == 2016.07.21   
-* nwalign == 0.3.1   
-* numpy == 1.11.1  
-* statsmodels == 0.6.1  
-* pysam == 0.9.1.4 
-* paramiko == 2.7.1
+* BWA==0.7.17-1
+* bowtie2==2.3.4.1-1
+* bedtools==2.26.0+dfsg-5
+* samtools==1.7-1
+* bcftools==1.7-2
+> python3
+* argparse==1.4.0
+* svgwrite==1.1.6  
+> python2
+* HTSeq==0.6.1p1   
+* PyYAML==3.11  
+* swalign==0.3.1  
+* pyfaidx==0.2.7     
+* regex==2018.01.10   
+* nwalign==0.3.1   
+* numpy==1.11.1  
+* statsmodels==0.6.1  
+* pysam==0.9.1.4 
+* paramiko==2.7.1
+* svgwrite==1.1.6 
 
 ## Usage
-	python Plt_main.py [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
+	python3 Plt_main.py [option0] {GUIDE-seq,CIRCLE-seq,SITE-seq} [option1]
 	
 #### option0:    
     -h, --help            show this help message and exit
@@ -112,18 +121,18 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 
 By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile with a Circos plot.
 ## Requirement
-* python == 3.7   
-* pandas == 0.20.1  
-* numpy == 1.14.5   
-* pyfaidx == 0.4.8.4    
-* tensorflow == 1.8.0  
-* Sonnet == 1.33
-* CRISPRoff == 1.1.1
-* python == 2.7
-* biopython == 1.73
-* ViennaRNA == 2.4.12
-* RIsearch == 2.1
-* circos == 0.69-6
+* python==3.7   
+* pandas==0.20.1  
+* numpy==1.14.5   
+* pyfaidx==0.4.8.4    
+* tensorflow==1.8.0  
+* Sonnet==1.33
+* CRISPRoff==1.1.1
+* python==2.7
+* biopython==1.73
+* ViennaRNA==2.4.12
+* RIsearch==2.1
+* circos==0.69-6
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5}]
