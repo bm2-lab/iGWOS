@@ -15,11 +15,14 @@ from P3_file_upload import get_time
 from S1 import find_initial_read_pileups, call_site_seq_features
 
 def at():
+    """
+    By default, half of the thread is called
+    """
     thread = os.popen("grep 'processor' /proc/cpuinfo | sort -u | wc -l").read().rstrip('\n')
     thread = int(thread)
     return round(thread/2)
 
-def site_data_analysis(read1, read2, output, target, ref, p=at()):
+def site_data_analysis(read1, read2, output, target, ref, label, p=at()):
     """
     if file.endswith('.sra'):
         print ('[{0}][INFO][SITEseq] unpack the sequencing data'.format(get_time()))
@@ -30,11 +33,26 @@ def site_data_analysis(read1, read2, output, target, ref, p=at()):
         subprocess.call(cmd, executable='/bin/bash', shell=True)
         file = file.rstrip('.sra')+'.fastq'
     """
-    name = read1.rstrip('.fastq').split('_')[0]
+    #name = read1.rstrip('.fastq').split('_')[0]
+    name = output+'/'+label
+    
+    ref_name = ref.split('/')[-1].rstrip('.fa')
+    ref_path = '/'.join(ref.split('/')[:-1]) + '/'
+    ref_index = ['{0}.{1}.bt2'.format(ref_name,i) for i in range(1,5)] + ['{0}.rev.{1}.bt2'.format(ref_name,i) for i in range(1,3)]
+    ref_index_n = 0
+    for f in ref_index:
+        if os.path.exists(ref_path+f):
+            ref_index_n += 1
+    assert ref_index_n == 6, 'the index file for {0} is not in {1} or incomplete'.format(ref_name, ref_path)
+
+
     cmd = []
-    cmd.append("bowtie2 -p {0} -x hg38 --gbar 30 -1 {1} -2 {2} -S {3}".format(p,read1,read2,name+'.sam'))
+    if read2 == '':
+        cmd.append("bowtie2 -p {0} -x {3} --gbar 30 -U {1} -S {2}".format(p, read1, name+'.sam', ref_path+ref_name))
+    else:
+        cmd.append("bowtie2 -p {0} -x {4} --gbar 30 -1 {1} -2 {2} -S {3}".format(p, read1, read2, name+'.sam', ref_path+ref_name))
     cmd.append("samtools view -bS {0} > {1}".format(name+'.sam',name+'.bam'))
-    cmd.append("samtools sort {0} -o {1}".format(name+'.bam',name+'s'))
+    cmd.append("samtools sort {0} -o {1}".format(name+'.bam',name+'s.bam'))
     cmd.append("samtools index {0}".format(name+'s.bam'))
     for i in cmd:
         try:
@@ -59,8 +77,10 @@ def trans_SITEseq_output_to_standard_output(input_file,output_file,target):
 
     with open(input_file,'r') as f:
         upload_data = []
+        flag = 0
         for l in f:
             if l.startswith('>'):
+                flag = 0
                 ll = l.rstrip('\n').split('|')
                 num = ll[-1]
                 num = int(num)
@@ -80,8 +100,14 @@ def trans_SITEseq_output_to_standard_output(input_file,output_file,target):
                         loc = loc+20-l_b_sg
                 except:
                     print('there is a sequence with no sgRNA in it')
-            upload_data.append([chromo,loc,off_seq,chain,num,mismatch_n])
+                else:
+                    flag += 1
+
+            if flag != 0:
+                upload_data.append([chromo,loc,off_seq,chain,num,mismatch_n])
     with open(output_file,'w') as fo:
+        #idx = 1
+        fo.write('Location\tReads\tStrand\tCleavage_seq\tMismatch\tTagret_seq\n')
         for i in upload_data:
             chromo,loc,off_seq,chain,num,mismatch_n = i
             if chain == '+':
@@ -91,6 +117,7 @@ def trans_SITEseq_output_to_standard_output(input_file,output_file,target):
                 start_loc = loc-22
                 end_loc = loc+1
             fo.write('{0}:{1}-{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n'.format(chromo,start_loc,end_loc,num,chain,sgRNA,mismatch_n,target))
+            #idx += 1
             
     return upload_data
 
@@ -173,10 +200,11 @@ def findsgRNA(seq,target):
 def SITE_ot_2_visl(offtargets,target):
     visual = []
     for i in offtargets:
-        chromo,loc,off_seq,chain,num,mismatch_n = i
+        #chromo,loc,off_seq,chain,num,mismatch_n = i
+        off_seq,num = i
         d = {}
         d['reads'] = num
-        d['realigned_ref_seq'] = target
-        d['seq'] = off_seq
+        d['realigned_ref_seq'] = target.upper()
+        d['seq'] = off_seq.upper()
         visual.append(d)
     return visual

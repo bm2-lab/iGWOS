@@ -4,6 +4,319 @@
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/P1_genyaml.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/P1_genyaml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/P3_file_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/P3_file_upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/Plt_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/Plt_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/Plt_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/Plt_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/Plt_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/Plt_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/Plt_trans.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/Plt_trans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/S2.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/S2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/.eggs/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/StepVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/_HTSeq_internal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/_version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/scripts/count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/HTSeq/scripts/qa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/StepVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/_HTSeq_internal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/_version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/scripts/count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/HTSeq/scripts/qa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/scripts/flake8.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/scripts/htseq-count" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/scripts/htseq-qa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/AutoPyObjPtr.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/HTSeq/_HTSeq.pxd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/HTSeq/_HTSeq.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/StepVector.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/StepVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/StepVector_wrap.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/_HTSeq.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python2/src/step_vector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/_HTSeq_internal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/_version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/scripts/count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/scripts/qa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/HTSeq/scripts/qa.py.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/scripts/htseq-count" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/scripts/htseq-qa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/AutoPyObjPtr.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/HTSeq/_HTSeq.pxd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/HTSeq/_HTSeq.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/StepVector.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/StepVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/StepVector_wrap.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/_HTSeq.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/python3/src/step_vector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/scripts/flake8.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/scripts/htseq-count" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/scripts/htseq-qa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/AutoPyObjPtr.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/HTSeq/_HTSeq.pxd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/HTSeq/_HTSeq.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/HTSeq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/StepVector.i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/StepVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/StepVector_wrap.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/_HTSeq.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/HTSeq-0.7.2/src/step_vector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/NUC_SIMPLE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/alignReads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/callVariants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/circleseq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/findCleavageSites.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/manifest.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/mergeReads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/referenceFree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/utility.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/circleseq/visualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/NUC_SIMPLE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/site_pvalue.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/test_align.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/scripts/test_ga.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/CIRCLEseq_test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/U2OS_EMX1.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/U2OS_EMX1.bam.bai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/U2OS_EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/U2OS_EMX1_sorted.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/control_U2OS_EMX1.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/control_U2OS_EMX1.bam.bai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/control_U2OS_EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/aligned/control_U2OS_EMX1_sorted.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/fastq/U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/fastq/control_U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/identified/U2OS_EMX1_CONTROL_coordinates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/identified/U2OS_EMX1_NUCLEASE_coordinates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/identified/U2OS_EMX1_count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/identified/U2OS_EMX1_identified_matched.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/identified/U2OS_EMX1_identified_unmatched.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.amb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.ann" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.bwt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.fai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.pac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/CIRCLEseq_test_genome.fa.sa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/EMX1.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/EMX1.r1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/EMX1.r2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/EMX1_control.r1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/input/EMX1_control.r2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/merged/U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/merged/control_U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/U2OS_EMX1.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/U2OS_EMX1.bam.bai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/U2OS_EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/U2OS_EMX1_sorted.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/control_U2OS_EMX1.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/control_U2OS_EMX1.bam.bai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/control_U2OS_EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/aligned/control_U2OS_EMX1_sorted.bam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/fastq/U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/fastq/control_U2OS_EMX1_merged.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/identified/U2OS_EMX1_CONTROL_coordinates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/identified/U2OS_EMX1_NUCLEASE_coordinates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/identified/U2OS_EMX1_count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/identified/U2OS_EMX1_identified_matched.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/identified/U2OS_EMX1_identified_unmatched.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/output/visualization/U2OS_EMX1_offtargets.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/data/visualization/U2OS_EMX1_offtargets.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/scripts/CIRCLEseq_prepare_test_data.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/scripts/CIRCLEseq_prepare_test_genome.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/scripts/CIRCLEseq_test_bed.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/test_circleseq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circleseq/test/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circos.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/circos_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detection/circos_input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/etc/image.generic.conf.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/AUTHORS.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/EMX1_visualization.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/MANIFEST" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/alignReads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/filterBackgroundSites.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/guideseq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/identifyOfftargetSites.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/consolidate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/demultiplex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/docs/barcode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/docs/flowchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/example/samplekey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/example/undemux.i1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/example/undemux.i2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/example/undemux.r1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/example/undemux.r2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/consolidated/mysample.r1.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/consolidated/mysample.r2.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/GACTCCTACCTAGT.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/GACTCCTACCTAGT.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/GACTCCTACCTAGT.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/GACTCCTACCTAGT.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/mysample.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/mysample.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/mysample.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/mysample.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/sample2.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/sample2.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/sample2.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/sample2.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/undetermined.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/undetermined.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/undetermined.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/demultiplexed/undetermined.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/umitagged/mysample.r1.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/umitagged/mysample.r2.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/undemultiplexed/samplekey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/undemultiplexed/undemux.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/undemultiplexed/undemux.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/undemultiplexed/undemux.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/data/undemultiplexed/undemux.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/test_consolidate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/test_demultiplex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/test_umitag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/test/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/umi/umitag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/validation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq/visualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/guideseq_flowchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/aligned/EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/aligned/control.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/consolidated/EMX1.r1.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/consolidated/EMX1.r2.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/consolidated/control.r1.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/consolidated/control.r2.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/EMX1.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/EMX1.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/EMX1.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/EMX1.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/control.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/control.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/control.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/control.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/undetermined.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/undetermined.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/undetermined.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/demultiplexed/undetermined.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/filtered/EMX1_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/identified/EMX1_identifiedOfftargets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/identified/control_identifiedOfftargets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/umitagged/EMX1.r1.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/umitagged/EMX1.r2.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/umitagged/control.r1.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/umitagged/control.r2.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.i1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.i2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.r1.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/undemultiplexed/undemux.r2.fastq.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/data/visualization/EMX1_identifiedOfftargets_offtargets.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/demultiplex_manifest.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test/reference_output/EMX1_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test/reference_output/VEGFA_site1_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test/reference_output/VEGFA_site2_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test/reference_output/VEGFA_site3_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/large_test/reference_output/md5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/aligned/EMX1.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/aligned/control.sam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/consolidated/EMX1.r1.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/consolidated/EMX1.r2.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/consolidated/control.r1.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/consolidated/control.r2.consolidated.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/EMX1.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/EMX1.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/EMX1.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/EMX1.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/control.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/control.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/control.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/control.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/undetermined.i1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/undetermined.i2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/undetermined.r1.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/demultiplexed/undetermined.r2.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/filtered/EMX1_backgroundFiltered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/identified/EMX1_identifiedOfftargets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/identified/control_identifiedOfftargets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/umitagged/EMX1.r1.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/umitagged/EMX1.r2.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/umitagged/control.r1.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/umitagged/control.r2.umitagged.fastq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/output_test/visualization/EMX1_offtargets.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/bwa_index_alignment.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/compile_dependencies.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/prepare_test_data.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/prepare_test_genome.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/prepare_test_genome_index.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/samplekey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/scripts/test_regions.bed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/test_genome.fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/test_guideseq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/test_manifest.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/test/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/guideseq/tox.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/outcome.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/run/run.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/detection/run/run.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/test_SITE_visual.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection/upload_file_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/circos_detection.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/circos_igwos.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/circos_igwos.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/circos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/circos.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction/parse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,67 +333,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prediction/parse.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circos.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/circos.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plt_process.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/Plt_process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding>
-                <element signature="e#85#102#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_file_test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/upload_file_test.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Plt_trans.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/Plt_trans.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="55" column="62" lean-forward="true" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="198">
-                <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <first_editor relative-caret-position="110">
+                <caret line="5" column="124" selection-start-line="5" selection-start-column="111" selection-end-line="5" selection-end-column="124" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plt_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/Plt_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="117" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="117" />
             </state>
           </provider>
         </entry>
@@ -102,7 +362,7 @@
       <find>en_path</find>
       <find>boost</find>
       <find>file</find>
-      <find />
+      <find>==</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,9 +378,9 @@
         <option value="$PROJECT_DIR$/detection/circos.conf" />
         <option value="$PROJECT_DIR$/detection/circos.py" />
         <option value="$PROJECT_DIR$/prediction/main.py" />
-        <option value="$PROJECT_DIR$/detection/Plt_parser.py" />
         <option value="$PROJECT_DIR$/prediction/parse.py" />
         <option value="$PROJECT_DIR$/detection/Plt_trans.py" />
+        <option value="$PROJECT_DIR$/detection/Plt_parser.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -135,10 +395,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="254" />
-    <option name="y" value="89" />
+    <option name="x" value="56" />
+    <option name="y" value="63" />
     <option name="width" value="1934" />
-    <option name="height" value="887" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -245,7 +505,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="254" y="89" width="1934" height="887" extended-state="0" />
+    <frame x="56" y="63" width="1934" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
@@ -254,12 +514,12 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49946696" weight="0.29178083" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.28082192" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48" visible="true" weight="0.14834578" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48082596" visible="true" weight="0.14834578" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.52" side_tool="true" visible="true" weight="0.14834578" />
+      <window_info id="Structure" order="1" sideWeight="0.51917404" side_tool="true" visible="true" weight="0.14834578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.50153375" side_tool="true" weight="0.14698938" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -560,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prediction/parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/detection/circos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -597,18 +850,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prediction/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/detection/Plt_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="117" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="117" />
+        <state relative-caret-position="836">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="198">
-            <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <first_editor relative-caret-position="110">
+            <caret line="5" column="124" selection-start-line="5" selection-start-column="111" selection-end-line="5" selection-end-column="124" />
           </first_editor>
           <second_editor />
         </state>

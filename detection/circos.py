@@ -15,26 +15,73 @@ def gen_conf(file='circos_input.txt',ref='hg19'):
             'type = scatter',
             '<plot>',
             'r1 = 0.99r',
-            'r0 = 0.61r',
+            'r0 = 0.60r',
             'color = ddgrey',
             'stroke_color     = black',
             'stroke_thickness = 1',
             'glyph            = circle',
-            'glyph_size       = 20p',
-            'max   = 0.013',
+            'glyph_size       = 15p',
+            'max   = 100000',
             'min   = 0',
+			'<backgrounds>',
+			'<background>',
+			'color     = vlred',
+			'y0        = 0.8r',
+			'</background>',
+			'<background>',
+			'color     = vlyellow',
+			'y1        = 0.8r',
+			'y0        = 0.4r',
+			'</background>',
+			'<background>',
+			'color     = vvlgreen',
+			'y1        = 0.4r',
+			'</background>',
+			'</backgrounds>',
+			'<axes>',
+			'<axis>',
+			'color     = lred',
+			'thickness = 1',
+			'spacing   = 0.05r',
+			'y0        = 0.8r',
+			'</axis>',
+			'<axis>',
+			'color     = dred',
+			'thickness = 2',
+			'spacing   = 0.1r',
+			'y0        = 0.8r',
+			'</axis>',
+			'<axis>',
+			'color     = lyellow',
+			'thickness = 1',
+			'spacing   = 0.05r',
+			'y1        = 0.8r',
+			'y0        = 0.4r',
+			'</axis>',
+			'<axis>',
+			'color     = dyellow',
+			'thickness = 2',
+			'spacing   = 0.1r',
+			'y1        = 0.8r',
+			'y0        = 0.4r',
+			'</axis>',
+			'<axis>',
+			'color     = lgreen',
+			'thickness = 1',
+			'spacing   = 0.05r',
+			'y1        = 0.4r',
+			'</axis>',
+			'<axis>',
+			'color     = dgreen',
+			'thickness = 2',
+			'spacing   = 0.1r',
+			'y1        = 0.4r',
+			'</axis>',
+			'</axes>',
             '<rules>',
             '</rules>',
             '</plot>',
             '</plots>',
-            '<highlights>',
-            '<highlight>',
-            'file = data/karyotype.hg19.highlight.txt',
-            'r1 = 0.99',
-            'r0 = 0.60',
-            'fill_color = vvlred',
-            '</highlight>',
-            '</highlights>',
             '<<include etc/ideogram.conf>>',
             '<<include etc/ticks.conf>>',
             '<image>',
@@ -54,16 +101,18 @@ def gen_circos_data(stand_file):
     circos_data = []
     
     with open(stand_file,'r') as r_f:
+        
         for l in r_f:
-            ls = l.split('\t')
-            loc = ls[0]
-            sgRNA = ls[3]
-            num = ls[1]
-            chromosome,s_e = loc.split(':')
-            start,end = s_e.split('-')
-            description = sgRNA+'_'+num
-            chromosome = chromosome.replace('chr','hs')
-            circos_data.append(' '.join([chromosome,start,end,description]))
+            if l.startswith('Location') == False:
+                ls = l.split('\t')
+                loc = ls[0]
+                sgRNA = ls[3]
+                num = ls[1]
+                chromosome,s_e = loc.split(':')
+                start,end = s_e.split('-')
+                description = num
+                chromosome = chromosome.replace('chr','hs')
+                circos_data.append(' '.join([chromosome,start,end,description]))
     with open('circos_input.txt','w') as w_f:
         for i in circos_data:
             w_f.write(i)
@@ -76,11 +125,9 @@ def circos(stand_file,output_path):
 
     cmd = 'circos -conf circos.conf -debug_group summary,timer > run.out'
     subprocess.call(cmd, executable='/bin/bash', shell=True)
-    if output_path.endswith('/'):
-        output_path = output_path
-    else:
+    if output_path.endswith('/') == False:
         output_path += '/'
-    cmd = 'mv circos.png circos.svg -t {0}'.format(output_path)
+    cmd = 'mv circos.png circos.svg -t {0}'.format(output_path+'visualization/')
     subprocess.call(cmd, executable='/bin/bash', shell=True)
             
     

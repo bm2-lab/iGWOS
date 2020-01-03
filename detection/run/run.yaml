@@ -1,15 +1,26 @@
-reference_genome: hg38.fa
-analysis_folder: whatever
+reference_genome: debug_data/guide-seq/test_genome.fa
+output_folder: /root/project/guidetest
 
 bwa: bwa
-samtools: samtools
+bedtools: bedtools
 
-window_size: 3
-merged_analysis: True
-gap_threshold: 3
-read_threshold: 4
-mismatch_threshold: 6
-start_threshold: 1
-mapq_threshold: 50
+demultiplex_min_reads: 1000
+
+undemultiplexed:
+    forward: debug_data/guide-seq/undemux.r1.fastq.gz
+    reverse: debug_data/guide-seq/undemux.r2.fastq.gz
+    index1: debug_data/guide-seq/undemux.i1.fastq.gz
+    index2: debug_data/guide-seq/undemux.i2.fastq.gz
 
 samples:
+    control:
+        target:
+        barcode1: CTCTCTAC
+        barcode2: CTCTCTAT
+        description: Control
+
+    EMX1:
+        target: GAGTCCGAGCAGAAGAAGAANGG
+        barcode1: TAGGCATG
+        barcode2: TAGATCGC
+        description: EMX1

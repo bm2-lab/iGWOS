@@ -7,7 +7,7 @@ Created on Sun Aug 27 18:55:18 2017
 
 import time
 #from ftplib import FTP
-import paramiko
+#import paramiko
 import os
 import datetime
 
@@ -28,16 +28,8 @@ def get_time():
     return '{0} {1}'.format(ds,ts)
 
 date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-"""
-import subprocess
-def up_load(file,uid,pw):
-    cmd = "scp {0} {1}@192.168.1.101:/home/xuedy/database".format(file,uid)
-    subprocess.call(cmd, executable='/bin/bash', shell=True)
-    cmd = pw
-    subprocess.call(cmd, executable='/bin/bash', shell=True)
-    
-"""    
 
+"""
 def ssh_scp_put(user,password,file):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -48,3 +40,4 @@ def ssh_scp_put(user,password,file):
     sftp = paramiko.SFTPClient.from_transport(ssh.get_transport())
     sftp = ssh.open_sftp()
     sftp.put(os.getcwd()+'/'+file, '/home/xuedy/database/'+file)
+"""

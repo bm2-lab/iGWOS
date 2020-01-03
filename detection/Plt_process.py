@@ -26,7 +26,7 @@ def GUIDE_process(args):
     parag['barcode2'] = args.barcode2 
     parag['c_barcode1'] = args.cbarcode1
     parag['c_barcode2'] = args.cbarcode2
-    parag['description'] = args.description
+    parag['description'] = args.label
     parag['demultiplex_min_reads']= args.demultiplex_min_reads
     parag['target'] = args.target
     genyaml_G(
@@ -39,13 +39,16 @@ def GUIDE_process(args):
             )
     print ('[{0}][INFO][guideseq] done'.format(get_time()))
     print ('[{0}][INFO][guideseq] start the process'.format(get_time()))
-    try:
-        cmd = 'python2 guideseq/guideseq/guideseq.py all -m run.yaml'
-    except:
-        print('there is something wrong with guideseq program')
+    cmd = 'python software/guideseq/guideseq/guideseq.py all --manifest run/run.yaml'
     subprocess.call(cmd, executable='/bin/bash', shell=True)
-    guide_standard(args.output+'/identified/{0}_identifiedOfftargets.txt'.format(args.label),args.output+'/outcome.txt',args.target)
-    circos(args.output+'/outcome.txt')
+    guide_outcome_f = '{0}/identified/{1}_identifiedOfftargets.txt'.format(args.output, args.label)
+    if os.path.exists(guide_outcome_f) == False:
+        print('there is something wrong with guideseq program')
+        return 0
+    else:
+        guide_standard(guide_outcome_f, args.output+'/outcome.txt', args.target)
+        circos(args.output+'/outcome.txt', args.output)
+        return 1
 
 def CIRCLE_process(args):
     print ('[{0}][INFO][circleseq] reading the input information'.format(get_time()))
@@ -54,7 +57,7 @@ def CIRCLE_process(args):
     input_infg['read2'] = args.read2
     input_infg['controlread1'] = args.cread1
     input_infg['controlread2'] = args.cread2
-    input_infg['description'] = args.description
+    input_infg['description'] = args.label
     input_infg['target'] = args.target
     parag['gap_threshold'] = args.gap_threshold
     parag['mapq_threshold'] = args.mapq_threshold
@@ -74,24 +77,29 @@ def CIRCLE_process(args):
             )
     print ('[{0}][INFO][circleseq] done'.format(get_time()))
     print ('[{0}][INFO][circleseq] start the process'.format(get_time()))
-    try:
-        cmd = 'python2 circleseq/circleseq/circleseq.py all -m run.yaml'
-    except:
-        print('there is something wrong with circleseq program')
+    cmd = 'python software/circleseq/circleseq/circleseq.py all --manifest run/run.yaml'
     subprocess.call(cmd, executable='/bin/bash', shell=True)
-    circle_standard(args.output+'/identified/{0}_{1}_identified_matched.txt'.format(args.description,args.label),args.output+'/outcome.txt',args.target)
-    circos(args.output+'/outcome.txt')
+    circle_outcome_f = '{0}/identified/{1}_identified_matched.txt'.format(args.output, args.label)
+    if os.path.exists(circle_outcome_f) == False:
+        print('there is something wrong with circleseq program')
+        return 0
+    else:
+        circle_standard(circle_outcome_f, args.output+'/outcome.txt', args.target)
+        circos(args.output+'/outcome.txt', args.output)
+        return 1
 
     
 def SITE_process(args):
     ref_seq = args.target
-    offtargets = site_data_analysis(args.read1,args.read2,args.output,args.target,args.reference)
+    offtargets = site_data_analysis(args.read1, args.read2, args.output, args.target, args.reference, args.label)
     visual_data = SITE_ot_2_visl(offtargets,args.target)
+    #print(visual_data)
     if not os.path.exists(args.output+'/visualization'):
         os.mkdir(args.output+'/visualization')
-    f_n = args.output+'/visualization/'+args.description+'_'+args.label
-    SITE_visualizeOfftargets(visual_data, ref_seq, f_n)
-    circos(args.output+'/outcome.txt')
+    f_n = args.output+'/visualization/'+args.label+'_offtargets'
+    SITE_visualizeOfftargets(visual_data, ref_seq, f_n, title=args.label)
+    circos(args.output+'/outcome.txt', args.output)
+    return 1
 
 
     

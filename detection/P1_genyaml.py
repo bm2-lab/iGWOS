@@ -30,7 +30,7 @@ def yaml_structure(method):
                     'c_barcode1':'',
                     'c_barcode2':'',
                     'barcode1':'',
-                    'barcode1':''}
+                    'barcode2':''}
                }
     input_inf = sourcei[method]
     para = sourcep[method]
