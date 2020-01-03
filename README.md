@@ -237,7 +237,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     
 ## Citation
 
-Jifang Yan, Qi Liu et al. Benchmark genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
+Jifang Yan, Qi Liu, et al. Benchmark genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
 
 
 ## Contacts
