@@ -127,7 +127,7 @@ By inputting sequencing data generated from a certain technique, iGWOS returns t
 
 > cleavage site alignment visulization
 
-![off-target profile](img/EMX1_offtargets.svg)
+![off-target profile](img/EMX1_offtargets.png)
 
 > cleavage site Circos visualization
 
