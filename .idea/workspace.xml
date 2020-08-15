@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a593c532-2064-43d0-8e1e-054dca908816" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +23,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="286">
-                <caret line="133" column="38" lean-forward="true" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+              <first_editor relative-caret-position="22">
+                <caret line="8" selection-start-line="8" selection-end-line="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -80,9 +80,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="63" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-60" />
+    <option name="y" value="43" />
     <option name="width" value="1934" />
     <option name="height" value="948" />
   </component>
@@ -94,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,23 +104,13 @@
             <path>
               <item name="iGWOS" type="b2602c69:ProjectViewProjectNode" />
               <item name="iGWOS" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iGWOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iGWOS" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
-              <item name="run" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iGWOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iGWOS" type="462c0819:PsiDirectoryNode" />
               <item name="prediction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,23 +180,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="63" width="1934" height="948" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.24026696" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49946696" weight="0.29178083" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.14285715" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48082596" visible="true" weight="0.14834578" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.11012236" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4775" visible="true" weight="0.15298508" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.51917404" side_tool="true" visible="true" weight="0.14834578" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Structure" order="1" sideWeight="0.5225" side_tool="true" visible="true" weight="0.15298508" />
       <window_info id="Favorites" order="2" sideWeight="0.50153375" side_tool="true" weight="0.14698938" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -248,13 +236,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/data/encode_hg19.tab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -286,13 +268,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/data/encode_hg19.tab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -324,13 +300,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/data/encode_hg19.tab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -369,13 +339,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1430">
@@ -407,18 +371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="36" lean-forward="true" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/detection/circleseq/README.MD" />
     <entry file="file://$PROJECT_DIR$/detection/guideseq/README.md" />
-    <entry file="file://$PROJECT_DIR$/detection/guideseq/EMX1_visualization.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/guideseq/EMX1_visualization.png" />
     <entry file="file://$USER_HOME$/Documents/CIRCLE-seq.tab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -426,13 +382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/deep.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/deep.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/main2.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
       <provider selected="true" editor-type-id="text-editor">
@@ -463,13 +413,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detection/circos_input_file.txt" />
-    <entry file="file://$PROJECT_DIR$/detection/outcome.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/outcome.txt" />
     <entry file="file://$PROJECT_DIR$/prediction/docker.readme" />
     <entry file="file://$PROJECT_DIR$/detection/circos.conf">
       <provider selected="true" editor-type-id="text-editor">
@@ -517,18 +461,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="e#85#102#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection/test_SITE_visual.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/upload_file_test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/test_SITE_visual.svg" />
+    <entry file="file://$PROJECT_DIR$/detection/upload_file_test.txt" />
     <entry file="file://$PROJECT_DIR$/detection/Plt_trans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -553,8 +490,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="286">
-            <caret line="133" column="38" lean-forward="true" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+          <first_editor relative-caret-position="22">
+            <caret line="8" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
         </state>
