@@ -1,0 +1,5 @@
+# image build on Dockerfile
+docker build -t igwos:latest ./
+
+# run container
+docker run --name [container_name] -d igwos:latest

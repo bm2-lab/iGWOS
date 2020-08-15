@@ -5,12 +5,13 @@
 iGWOS is designed for the optimal genome-wide off-target sites (OTS) prediction by integrating the available OTS prediction tools in a complementary way. iGWOS integrates OTS prediction tools with an Adaboost framework, supports conventional NGG-PAM OTS prediction with mismatches up to 6 in human species.
 
 
-Predict CRISPR/Cas9-induced off-target cleavage sites by integrating distinct OTS prediction tools (CRISPRoff, uCRISPR, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
+iGWOS searches the candidate off-target sites with Cas-OFFinder and predict CRISPR/Cas9-induced off-target cleavage sites by integrating distinct OTS prediction tools (CRISPRoff, uCRISPR, DeepCRISPR, CFD, MIT, CROP-IT and CCTop).
 The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/DeepCRISPR)
 
-By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs with specificity scores, and visualizes the genome-wide off-target profile with a Circos plot. The iGWOS_score of a off-target site denotes its cleavage probability.
+By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs, and visualizes the top 200 risky genome-wide off-target profile with a Circos plot. The iGWOS score of a off-target site denotes its cleavage probability.
 
 ## Requirement
+* Docker==18.09.6
 * python==3.7   
 * pandas==0.20.1  
 * numpy==1.14.5   
@@ -25,7 +26,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 * RIsearch==2.1
 * circos==0.69-6
 
-*The performing environment for iGWOS can be referred at file "Dockerfile" preseted above.
+** Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS.
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5,6}]
@@ -83,7 +84,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     
 > output format
 
-    sgID	gRNA	OTS	Chr	Strand	Start	Mismatch	iGWOS_score
+    sgID	gRNA	OTS	Chr	Strand	Start	Mismatch	iGWOS
     sg1	GCCTCCCCAAAGCCTGGCCAGGG	GCCTCCCCAAAAGCTGAGCAGGG	chr1	+	929401	4	0.3254589692131059
     sg1	GCCTCCCCAAAGCCTGGCCAGGG	TGCTCCCCAGAGCCTAGCCGTGG	chr7	-	1900836	5	0.46115958387343875
     sg1	GCCTCCCCAAAGCCTGGCCAGGG	ACCTCCCCATAGCCTGGCCAGGG	chr11	-	44986455	2	0.529510001952807
@@ -94,7 +95,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
     
 ## Citation
 
-Jifang Yan, Qi Liu et al. Benchmark genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
+Jifang Yan, Qi Liu et al. Benchmarking and integrating genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
 
 
 ## Contacts

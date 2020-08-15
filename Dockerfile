@@ -45,10 +45,10 @@ RUN mkdir -p $BIO_HOME/bin && \
 	tar -zxvf /root/circos-0.69-6.tgz -C $BIO_HOME && \
 	chown -R root:root $BIO_HOME/circos-0.69-6 && \
 	ln -s $BIO_HOME/circos-0.69-6 $BIO_HOME/circos && \
-	rm -f /root/circos-0.69-6.tgz && \
-	mkdir -p /root/.cpan/CPAN/
+	rm -f /root/circos-0.69-6.tgz
 
-RUN apt-get install -y libgd-dev libgd-perl && \
+RUN mkdir -p /root/.cpan/CPAN/ && \
+    apt-get install -y libgd-dev libgd-perl && \
 	cpan -i Font::TTF::Font && \
 	cpan -i Config::General && \
 	cpan -i Clone && \
