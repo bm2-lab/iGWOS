@@ -18,25 +18,21 @@ ENV DATAPATH $BIO_HOME/RNAstructure/data_tables/
 
 ENV INSTALL_DIR $BIO_HOME/bin
 
-
-RUN apt-get update && apt-get install -y vim pciutils && \
+# INSTALL dependence and NVIDIA-opencl
+RUN apt-get update && apt-get install -y vim pciutils wget nvidia-opencl-dev nvidia-opencl-icd-340 && \
 	/usr/local/anaconda3/bin/pip --no-cache-dir install pyfaidx==0.5.5.2 tensorflow-gpu==1.14.0 dm-sonnet==1.19 
 
-# INSTALL NVIDIA-opencl
-RUN apt-get install -y nvidia-opencl-dev nvidia-opencl-icd-340
-
 # copy
-COPY Anaconda2-2019.03-Linux-x86_64.sh /root
-
-COPY circos-0.69-6.tgz /root
-
-COPY RIsearch-2.1.tar.gz /root
-
-COPY ViennaRNA-2.4.12.tar.gz /root
-
-COPY RNAstructureSource.tgz /root
-
 COPY uCRISPR $BIO_HOME/uCRISPR
+
+# wget
+WORKDIR /root
+
+RUN wget https://repo.anaconda.com/archive/Anaconda2-2019.03-Linux-x86_64.sh && \
+    wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_4_x/ViennaRNA-2.4.12.tar.gz && \
+    wget http://rna.urmc.rochester.edu/Releases/current/RNAstructureSource.tgz && \
+    wget https://rth.dk/resources/risearch/RIsearch-2.1.tar.gz && \
+    wget http://circos.ca/distribution/circos-0.69-6.tgz
 
 # Install Anaconda
 RUN bash /root/Anaconda2-2019.03-Linux-x86_64.sh -b -p /usr/local/anaconda2 && \
@@ -49,9 +45,8 @@ RUN mkdir -p $BIO_HOME/bin && \
 	tar -zxvf /root/circos-0.69-6.tgz -C $BIO_HOME && \
 	chown -R root:root $BIO_HOME/circos-0.69-6 && \
 	ln -s $BIO_HOME/circos-0.69-6 $BIO_HOME/circos && \
-	rm -f /root/circos-0.69-6.tgz
-
-RUN mkdir -p /root/.cpan/CPAN/ 
+	rm -f /root/circos-0.69-6.tgz && \
+	mkdir -p /root/.cpan/CPAN/
 
 RUN apt-get install -y libgd-dev libgd-perl && \
 	cpan -i Font::TTF::Font && \
