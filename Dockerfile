@@ -1,6 +1,6 @@
 FROM gconda:latest
 
-MAINTAINER YJF,2020
+LABEL maintainer="YJF,2020"
 
 ENV BIO_HOME /usr/local/tool
 

@@ -26,7 +26,15 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 * RIsearch==2.1
 * circos==0.69-6
 
-** Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS.
+
+## Installation
+Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS. Users could easily perform the iGWOS under the docker image.
+    
+    # build image based on Dockerfile
+    docker build -t igwos:latest ./
+
+    # run container
+    docker run --name [container_name] -d igwos:latest
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5,6}]
