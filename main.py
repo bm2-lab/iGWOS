@@ -115,7 +115,7 @@ def deepots(f1, gpu, step = 1000):
 
 def igwos(gRNA_path,f,output,mismatch):
     # f = f[f.Mismatch > 0]
-    print('Predict with CFD,MIT,CROP-IT and CCTop')
+    print('Predict with CFD, MIT, CROP-IT and CCTop')
     f['CFD'] = f.apply(lambda row: calcCfdScore(row['gRNA'], row['OTS']), axis=1)
     f['MIT'] = f.apply(lambda row: calcMitScore(row['gRNA'], row['OTS']), axis=1)
     f['CROP-IT'] = f.apply(lambda row: calcCropitScore(row['gRNA'], row['OTS']), axis=1)
@@ -147,14 +147,14 @@ def igwos(gRNA_path,f,output,mismatch):
     # Adaboost classifier to predict ots score
     print("Integrate prediciton scores")
     f['iGWOS'] = clf.predict_proba(X)[:, 1]
-    print(clf.classes_)
+    #print(clf.classes_)
     #change distribution
     #f['iGWOS'] = f.iGWOS.apply(lambda x: -math.log(x)-0.5)
     order=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start','End', 'Mismatch','iGWOS']
     f=f[order]
     f.to_csv('{0}/igwos.tab'.format(output), sep="\t", index=False)
     print("Output iGWOS predicition result in {0}/igwos.tab".format(output))
-    print(f.describe())
+    #print(f.describe())
 
 
 # parse arguments
