@@ -36,7 +36,7 @@ COPY uCRISPR $BIO_HOME/uCRISPR
 WORKDIR /root
 
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh && \
-	wget https://repo.anaconda.com/archive/Anaconda2-2019.03-Linux-x86_64.sh && \
+    wget https://repo.anaconda.com/archive/Anaconda2-2019.03-Linux-x86_64.sh && \
     wget https://www.tbi.univie.ac.at/RNA/download/sourcecode/2_4_x/ViennaRNA-2.4.12.tar.gz && \
     wget http://rna.urmc.rochester.edu/Releases/current/RNAstructureSource.tgz && \
     wget https://rth.dk/resources/risearch/RIsearch-2.1.tar.gz && \
