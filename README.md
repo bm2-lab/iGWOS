@@ -30,7 +30,7 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 ## Installation
 Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS. Users could easily perform the iGWOS under the docker image. 
 
-Attention: the Dockerfile is build based on **Ubuntu** base image.
+Attention: the **Dockerfile** was built based on **Ubuntu** base image.
     
     # build image based on Dockerfile
     docker build -t igwos:latest ./
