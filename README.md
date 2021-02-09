@@ -28,7 +28,9 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 
 
 ## Installation
-Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS. Users could easily perform the iGWOS under the docker image.
+Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS. Users could easily perform the iGWOS under the docker image. 
+
+Attention: the Dockerfile is build based on **Ubuntu** base image.
     
     # build image based on Dockerfile
     docker build -t igwos:latest ./
@@ -103,7 +105,7 @@ Please refer to file "**Dockerfile**" in the code to build the performing enviro
     
 ## Citation
 
-Jifang Yan, Qi Liu et al. Benchmarking and integrating genome-wide CRISPR off-target detection and prediction. Nucleic Acids Research, 2020 (Manuscript accepted)
+Jifang Yan, Qi Liu et al. Benchmarking and integrating genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
 
 
 ## Contacts
