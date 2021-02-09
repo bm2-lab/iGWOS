@@ -47,7 +47,7 @@ def pot(gid,gRNAs):
     return f_gRNA, f_pot
 
 
-# encode the ots
+# Encode the ots
 def epi(gline, ctcf, dnase, h3k4me3, rrbs, span):
     rna = gline[1]
     Chr = gline[2]
