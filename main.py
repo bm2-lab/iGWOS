@@ -13,7 +13,7 @@ from CROPIT.otscore import calcCropitScore
 from CCTop.otscore import calcCcTopScore
 from sklearn.ensemble import AdaBoostClassifier
 
-# first, get POT list of gRNA based on Cas-OFFinder.
+# First, get POT list of gRNA based on Cas-OFFinder.
 def cas_input(genome,gRNAs,mismatch, gpu):
     f=open('data/cas_input.txt','w')
     f.write(genome+'\n')
@@ -82,7 +82,7 @@ def encode(f1, en_path, cid, func=epi):
     f3 = pd.merge(f3, f1, how='inner', on=['sgID', 'gRNA'])
     input = f3.apply(lambda row: epi(row, ctcf, dnase, h3k4me3, rrbs, span), axis=1).tolist()
     x_sg_off_target = np.array(input).reshape(f3.shape[0], 8, 1, span)
-    # return x_sg_off_target, x_ot_off_target
+    # Return x_sg_off_target, x_ot_off_target
     fpkl = open('data/encode_off.pkl', 'wb')
     pickle.dump([x_sg_off_target, x_ot_off_target], fpkl)
     fpkl.close()
@@ -95,7 +95,6 @@ def deepots(f1, gpu, step = 1000):
     f.close()
     print("Predict with DeepCRISPR")
     sess = tf.InteractiveSession()
-    # using regression model, otherwise classification model
     off_target_model_dir = 'DeepCRISPR/trained_models/offtar_pt_cnn'
     is_reg = False
     dcmodel = DCModelOfftar(sess, off_target_model_dir, is_reg)
@@ -130,11 +129,11 @@ def igwos(gRNA_path,f,output,mismatch):
     os.system("./ucrispr.sh ")
     fucr = pd.read_csv('data/ucrispr.out', sep=' ', low_memory=False)
     f = pd.concat([f, fucr['uCRISPR']], axis=1)
-    # get trained model
+    # Load trained model
     ft = open('data/abc.pkl', 'rb')
     clf = pickle.load(ft)
     ft.close()
-    # form test data
+    # Form predicting data
     CRISPRoff=f['CRISPRoff']
     uCRISPR=f['uCRISPR']
     DeepCRISPR=f['DeepCRISPR']
@@ -148,8 +147,7 @@ def igwos(gRNA_path,f,output,mismatch):
     print("Integrate prediciton scores")
     f['iGWOS'] = clf.predict_proba(X)[:, 1]
     #print(clf.classes_)
-    #change distribution
-    #f['iGWOS'] = f.iGWOS.apply(lambda x: -math.log(x)-0.5)
+    
     order=['sgID', 'gRNA', 'OTS', 'Chr', 'Strand', 'Start','End', 'Mismatch','iGWOS']
     f=f[order]
     f.to_csv('{0}/igwos.tab'.format(output), sep="\t", index=False)
@@ -177,13 +175,13 @@ if out_path[-1] == '/':
 if not os.path.exists(out_path):
     os.mkdir(out_path)
 
-# read fa file of gRNAs.
+# Read fa file of gRNAs.
 fa_gRNA = Fasta(gRNA_path, sequence_always_upper=True)
 gid = list(fa_gRNA.keys())
 gRNAs = [fa_gRNA[i][:].seq for i in gid]
 fa_gRNA.close()
 
-## get POT list of gRNA based on Cas-OFFinder.
+## Get POT list of gRNA based on Cas-OFFinder.
 cas_input(gen_path, gRNAs, mismatch, gpu)
 f_gRNA, f_pot = pot(gid, gRNAs)
 ## encode ots and predict with deepcrispr
@@ -191,8 +189,9 @@ f_cid=pd.read_csv(cid_path,sep='\t',names=['cid','cell'])
 cid=f_cid.cid[f_cid.cell==cell].tolist()[0]
 encode(f_gRNA, en_path, cid)
 f_deep = deepots(f_pot,gpu)
-## integrate to igwos
+## Integrate to iGWOS
 igwos(gRNA_path,f_deep,out_path,mismatch)
 if cp==1:
-    print("visualize the genome-wide off-target profile with the circos plot")
+    print("Visualize the genome-wide off-target profile with the circos plot")
     os.system("./circos.sh {0}/igwos.tab {1} {2}".format(out_path,genome,out_path))
+print("Done!")
