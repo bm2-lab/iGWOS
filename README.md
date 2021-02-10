@@ -11,7 +11,6 @@ The genome encode way can be referred to DeepCRISPR (https://github.com/bm2-lab/
 By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely predicts the genome-wide OTS list of given gRNAs, and visualizes the top 200 risky genome-wide off-target profile with a Circos plot. The iGWOS score of a off-target site denotes its cleavage probability.
 
 ## Requirement
-* Docker==18.09.6
 * python==3.7   
 * pandas==0.20.1  
 * numpy==1.14.5   
@@ -28,9 +27,9 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 
 
 ## Installation
-Please refer to file "**Dockerfile**" in the code to build the performing environment for iGWOS. Users could easily perform the iGWOS under the docker image. 
+Install all the required software and packages mentioned above. Or you may refer to file "**Dockerfile**" to build the performing environment for iGWOS. 
 
-Attention: the **Dockerfile** was built based on **Ubuntu** base image.
+Attention: the **Dockerfile** was built based on **Ubuntu** base image (Docker==18.09.6).
     
     # build image based on Dockerfile
     docker build -t igwos:latest ./
