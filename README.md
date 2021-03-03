@@ -104,7 +104,7 @@ Attention: the **Dockerfile** was built based on **Ubuntu** base image (Docker==
     
 ## Citation
 
-Jifang Yan, Qi Liu et al. Benchmarking and integrating genome-wide CRISPR off-target detection and prediction. 2019 (Manuscript submitted)
+Yan, J., Liu, Q., et al. (2020). "Benchmarking and integrating genome-wide CRISPR off-target detection and prediction." Nucleic Acids Res 48(20): 11370-11379.
 
 
 ## Contacts
