@@ -27,15 +27,28 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 
 
 ## Installation
-Install all the required software and packages mentioned above. Or you may refer to file "**Dockerfile**" to build the performing environment for iGWOS with the code: 
+You can install the dependency using one of these methods:
+
+1. Install all the required software and packages mentioned above. 
+
+
+2. You may refer to file "**Dockerfile**" to build the performing environment for iGWOS with the code: 
     
-    # build image based on Dockerfile
-    docker build -t igwos:latest ./
+        # build image based on Dockerfile
+        $ docker build -t igwos:latest ./
 
-    # run container
-    docker run --name [container_name] -d igwos:latest
+        # run container
+        $ docker run --name [container_name] -d igwos:latest
 
-Attention: the **Dockerfile** was built based on **Ubuntu** base image (Docker==18.09.6).
+    Attention: the **Dockerfile** was built based on **Ubuntu** base image (Docker==18.09.6).
+
+3. Download the Docker image in terminal with the code:
+
+        # pull the image from Docker Hub
+        $ docker pull jafferyan/igwos_1.0:latest 
+
+        # run container
+        $ docker run --name [container_name] -d jafferyan/igwos_1.0:latest 
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5,6}]
