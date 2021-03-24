@@ -26,26 +26,17 @@ By inputting the gRNA(s) sequence file and related restrictions, iGWOS precisely
 * circos==0.69-6
 
 
-## Performing Environment
+## Install
 
 
-You can install the dependency using one of these methods:
-
-1. Install all the required software and packages mentioned above manually. 
+1. git clone https://github.com/bm2-lab/iGWOS.git 
 
 
-2. Download the Docker image in terminal with the code:
+2. Install the dependency:
 
         # pull the image from Docker Hub
         $ docker pull jafferyan/igwos_1.0:latest 
 
-
-3. You may refer to file "**Dockerfile**" to build the image with the code: 
-    
-        # build image based on Dockerfile
-        $ docker build -t igwos:latest ./
-
-    Attention: the **Dockerfile** was built based on **Ubuntu** base image (Docker==18.09.6).
 
 ## Usage
     python3 main.py [-h] [-v] [-gRNA GRNA] [-g GENOME] [-m {0,1,2,3,4,5,6}]
